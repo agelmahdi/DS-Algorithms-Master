@@ -1,5 +1,7 @@
 package com.agelmahdi.circulardoublylinkedlist;
 
+import org.omg.CORBA.NO_IMPLEMENT;
+
 public class CircularDoublySingleList {
     Node head= null;
     Node tail =null;
@@ -34,7 +36,9 @@ public class CircularDoublySingleList {
         else if (location ==0){
             node.previous = tail;
             node.next =head;
+
             head.previous =node;
+
             head =node;
             tail.next =node;
 
@@ -64,7 +68,51 @@ public class CircularDoublySingleList {
 
     }
 
-    public void deleteItemFromCDLL(int i) {
+    public void deleteItemFromCDLL(int location) {
+        if (head == null){
+            return;
+        }
+        else if (location ==0){
+            head = head.next;
+            head.previous = tail;
+            tail.next =head;
+           // tail =head;
+
+            size--;
+            if (size==0){
+                head = tail= head.next=head.previous=null;
+            }
+
+        }
+        else if (location >= size){
+
+            Node beforeLast = tail.previous;
+
+            if (beforeLast == head){
+                head = tail= head.next=head.previous=null;
+                size--;
+                return;
+            }
+
+            //tail=tail.previous;
+            beforeLast.next = head;
+            tail.next = head;
+           // head.previous =tail;
+
+            size--;
+        }
+        else {
+            Node before = head;
+            for (int i=0; i<location -1; i++){
+                before = before.next;
+            }
+
+            Node nextNode = before.next.next;
+            before.next = nextNode;
+            nextNode.previous = before;
+            size--;
+
+        }
     }
 
     public void traverseCDLL() {

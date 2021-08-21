@@ -14,9 +14,10 @@ public class MyClass {
 
 
         sll.insertInCDLL(55,2);
-        System.out.println("value: " + sll.head.next.next.previous.value);
 
-      //  sll.deleteItemFromCDLL(3);
+        sll.deleteItemFromCDLL(5);
+        System.out.println("value: " + sll.head.next.next.next.next.value);
+
         sll.traverseCDLL();
     }
 }
