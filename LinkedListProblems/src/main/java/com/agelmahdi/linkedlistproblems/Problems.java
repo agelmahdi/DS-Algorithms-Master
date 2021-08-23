@@ -25,4 +25,40 @@ public class Problems {
         }
         System.out.println(((HashSet) set).clone());
     }
+
+    public Node nthToLastNode(LinkedList linkedList, int n){
+        Node p1 = linkedList.head;
+        Node p2 = linkedList.head;
+        for (int i =0; i<n;i++){
+            if (p2 ==null) return null;
+            p2 =p2.next;
+        }
+        while (p2 !=null ){
+            p1 =p1.next;
+            p2 =p2.next;
+        }
+
+        return p2;
+    }
+    public LinkedList partitionAroundX(LinkedList ll, int x){
+
+        Node current = ll.head;
+        //System.out.println(ll.tail.value);
+        ll.tail = ll.head;
+        //System.out.println(ll.tail.value);
+        while (current !=null){
+            Node next= current.next;
+            if (current.value < x){
+                current.next = ll.head;
+                ll.head = current;
+            }else {
+                ll.tail.next=current;
+                ll.tail=current;
+            }
+            current = next;
+        }
+        ll.tail.next=null;
+        return ll;
+
+    }
 }
