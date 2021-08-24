@@ -1,1 +1,1 @@
-include ':app', ':Recursion', ':BigO', ':Arrays', ':LinkedList', ':CircularLinkedList', ':DoublyLinkedList', ':CircularDoublyLinkedList', ':LinkedListProblems'
+include ':app', ':Recursion', ':BigO', ':Arrays', ':LinkedList', ':CircularLinkedList', ':DoublyLinkedList', ':CircularDoublyLinkedList', ':LinkedListProblems', ':StackArray'
