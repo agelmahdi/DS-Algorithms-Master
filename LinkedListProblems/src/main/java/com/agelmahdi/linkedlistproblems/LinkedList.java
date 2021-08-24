@@ -42,12 +42,12 @@ public class LinkedList {
         size++;
     }
 
-    public void traverse(LinkedList ll) {
+    public void traverse() {
 
-        Node temp = ll.head;
-        for (int i = 0; i < ll.size; i++) {
+        Node temp = head;
+        for (int i = 0; i < size; i++) {
             System.out.print(temp.value);
-            if (i != ll.size - 1) {
+            if (i != size - 1) {
                 System.out.print(" -> ");
 
             }
