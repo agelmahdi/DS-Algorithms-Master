@@ -83,6 +83,53 @@ public class Problems {
         }
         return resultLL;
 
+    }
+
+    // intersection
+
+    private Node getKthNode(Node head, int k){
+        Node current = head;
+        while (k>0 && current !=null){
+            current = current.next;
+            k--;
+        }
+        return current;
+    }
+
+   public Node findIntersection(LinkedList list1,LinkedList list2){
+        if (list1.head == null || list2.head ==null) return null;
+        if (list1.tail != list2.tail) return null;
+
+        Node shorter =new Node();
+       Node longer =new Node();
+
+        if (list1.size > list2.size){
+            longer = list1.head;
+            shorter =list2.head;
+        }
+        else {
+            longer =list2.head;
+            shorter = list1.head;
+        }
+
+        longer = getKthNode(longer, Math.abs(list1.size-list2.size));
+
+        while (shorter != longer){
+            shorter = shorter.next;
+            longer = longer.next;
+        }
+        return longer;
 
     }
+    void addSameNode(LinkedList list1,LinkedList list2, int value){
+        Node node = new Node();
+        node.value = value;
+
+        list1.tail.next= node;
+        list1.tail=node;
+        list2.tail.next = node;
+        list2.tail = node;
+
+    }
+
 }

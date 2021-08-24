@@ -14,12 +14,19 @@ public class Main {
         linkedList2.insert(2);
 
 
+
+
         Problems p = new Problems();
-       // p.removeDup(linkedList);
+
+        p.addSameNode(linkedList,linkedList2,5);
+        p.addSameNode(linkedList,linkedList2,2);
+        p.addSameNode(linkedList,linkedList2,1);
+
+        // p.removeDup(linkedList);
        // linkedList.traverse();
-        LinkedList node= p.sumLists(linkedList,linkedList2);
-        //System.out.println(node);
-        node.traverse();
+        Node node= p.findIntersection(linkedList,linkedList2);
+        System.out.println(node.value);
+       // node.traverse();
 
 
 
