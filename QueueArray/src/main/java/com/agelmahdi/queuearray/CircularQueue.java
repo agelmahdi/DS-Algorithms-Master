@@ -19,7 +19,7 @@ public class CircularQueue {
     //Space complexity O(1)
     public void enQueue(int value) {
         if (isFull()) {
-            System.out.println("queue is full");
+            throw new IndexOutOfBoundsException("Queue is full");
         } else if (isEmpty()) {
             start = 0;
             top++;

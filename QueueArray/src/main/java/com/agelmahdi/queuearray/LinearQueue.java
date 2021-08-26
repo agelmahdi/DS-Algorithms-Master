@@ -22,12 +22,12 @@ public class LinearQueue {
             startOfQueue = 0;
             topOfQueue++;
             queue[topOfQueue] = value;
-            System.out.println("inserted: " + value);
+            System.out.println("Queued: " + value);
 
         } else {
             topOfQueue++;
             queue[topOfQueue] = value;
-            System.out.println("inserted: " + value);
+            System.out.println("Queued: " + value);
         }
 
     }
