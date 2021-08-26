@@ -6,68 +6,77 @@ public class CircularQueue {
     int top;
     int size;
 
-    public CircularQueue(int size){
-        queue =new int[size];
+    //Time complexity O(1)
+    //Space complexity O(n)
+    public CircularQueue(int size) {
+        queue = new int[size];
         top = -1;
         start = -1;
         this.size = size;
     }
 
-    public void enQueue(int value){
-        if (isFull()){
+    //Time complexity O(1)
+    //Space complexity O(1)
+    public void enQueue(int value) {
+        if (isFull()) {
             System.out.println("queue is full");
-        }
-        else if (isEmpty()){
-            start= 0;
-            top ++;
+        } else if (isEmpty()) {
+            start = 0;
+            top++;
             queue[top] = value;
 
-            System.out.println("Queued: "+ value + " Position: "+ top);
-        }
-        else {
-            if (top +1 == size){
-                top =0;
-            }
-            else {
+            System.out.println("Queued: " + value + " Position: " + top);
+        } else {
+            if (top + 1 == size) {
+                top = 0;
+            } else {
                 top++;
             }
             queue[top] = value;
-            System.out.println("Queued: "+ value + " Position: "+ top);
-
+            System.out.println("Queued: " + value + " Position: " + top);
         }
 
     }
-    public boolean isFull(){
-        if (top +1 ==start ) return true;
+
+    //Time complexity O(1)
+    //Space complexity O(1)
+    private boolean isFull() {
+        if (top + 1 == start) return true;
         else return start == 0 && top + 1 == size;
     }
-    public boolean isEmpty(){
+
+    //Time complexity O(1)
+    //Space complexity O(1)
+    private boolean isEmpty() {
         return top == -1;
     }
-    public int deQueue(){
-        if (isEmpty()){
+
+    //Time complexity O(1)
+    //Space complexity O(1)
+    public int deQueue() {
+        if (isEmpty()) {
             throw new IllegalArgumentException("Queue is full");
-        }else{
+        } else {
             int value = queue[start];
             queue[start] = Integer.MIN_VALUE;
-            if (start == top){
-                top =start = -1;
-            }
-            else if (start +1 == size){
-                start=0;
-            }
-            else {
+            if (start == top) {
+                top = start = -1;
+            } else if (start + 1 == size) {
+                start = 0;
+            } else {
                 start++;
             }
             return value;
         }
     }
-    public int peek(){
-        if (isEmpty()){
+
+    //Time complexity O(1)
+    //Space complexity O(1)
+    public int peek() {
+        if (isEmpty()) {
             throw new IllegalArgumentException("Queue is empty");
-        }
-        else {
-            return queue[top];
+        } else {
+            return queue[start];
         }
 
     }
