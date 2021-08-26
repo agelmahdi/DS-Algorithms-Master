@@ -48,7 +48,7 @@ public class CircularQueue {
         if (isEmpty()){
             throw new IllegalArgumentException("Queue is full");
         }else{
-            int value = queue[top];
+            int value = queue[start];
             queue[start] = Integer.MIN_VALUE;
             if (start == top){
                 top =start = -1;
