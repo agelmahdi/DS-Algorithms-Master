@@ -2,6 +2,7 @@ package com.agelmahdi.stackqueuequestions;
 
 
 import com.agelmahdi.stackqueuequestions.MinStackValue.Stack;
+import com.agelmahdi.stackqueuequestions.QueueViaTwoStacks.QueueViaStack;
 
 import java.util.Arrays;
 
@@ -29,17 +30,27 @@ public class Main {
 //        System.out.println(Arrays.toString(stack.getSizes()));
 //
 //        stack.traverse();
+//
+//        Stack stack = new Stack();
+//        stack.push(2);
+//        stack.push(2);
+//        stack.push(3);
+//        stack.push(7);
+//        stack.push(5);
+//        stack.push(1);
+//        stack.poll();
+//
+//        System.out.println(stack.getMin());
 
-        Stack stack = new Stack();
-        stack.push(2);
-        stack.push(2);
-        stack.push(3);
-        stack.push(7);
-        stack.push(5);
-        stack.push(1);
-        stack.poll();
+        QueueViaStack queueViaStack = new QueueViaStack();
+        queueViaStack.enqueue(1);
+        queueViaStack.enqueue(2);
+        queueViaStack.enqueue(3);
+        queueViaStack.enqueue(4);
+        queueViaStack.enqueue(5);
+        queueViaStack.enqueue(6);
+        System.out.println(queueViaStack.dequeue());
 
-        System.out.println(stack.getMin());
 
     }
 }
