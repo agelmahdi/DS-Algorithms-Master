@@ -1,8 +1,8 @@
 package com.agelmahdi.stackqueuequestions;
 
 
-import com.agelmahdi.stackqueuequestions.MinStackValue.Stack;
-import com.agelmahdi.stackqueuequestions.QueueViaTwoStacks.QueueViaStack;
+import com.agelmahdi.stackqueuequestions.StackOfPlates.SetOfStacks;
+import com.agelmahdi.stackqueuequestions.StackOfPlates.Stack;
 
 import java.util.Arrays;
 
@@ -42,14 +42,27 @@ public class Main {
 //
 //        System.out.println(stack.getMin());
 
-        QueueViaStack queueViaStack = new QueueViaStack();
-        queueViaStack.enqueue(1);
-        queueViaStack.enqueue(2);
-        queueViaStack.enqueue(3);
-        queueViaStack.enqueue(4);
-        queueViaStack.enqueue(5);
-        queueViaStack.enqueue(6);
-        System.out.println(queueViaStack.dequeue());
+//        QueueViaStack queueViaStack = new QueueViaStack();
+//        queueViaStack.enqueue(1);
+//        queueViaStack.enqueue(2);
+//        queueViaStack.enqueue(3);
+//        queueViaStack.enqueue(4);
+//        queueViaStack.enqueue(5);
+//        queueViaStack.enqueue(6);
+//        System.out.println(queueViaStack.dequeue());
+
+        SetOfStacks stack = new SetOfStacks(5);
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        stack.push(6);
+        stack.push(6);
+        stack.push(6);
+
+        System.out.println(stack.getStacks());
 
 
     }

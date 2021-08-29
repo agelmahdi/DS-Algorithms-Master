@@ -1,6 +1,5 @@
 package com.agelmahdi.stackqueuequestions.QueueViaTwoStacks;
 
-import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class QueueViaStack {
