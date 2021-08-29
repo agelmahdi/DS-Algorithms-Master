@@ -63,8 +63,7 @@ public class Main {
         stack.push(8);
 
         System.out.println(stack.popAt(0));
-        System.out.println(stack.popAt(1));
-        System.out.println(stack.popAt(1));
+
 
 
     }
