@@ -51,7 +51,7 @@ public class Main {
 //        queueViaStack.enqueue(6);
 //        System.out.println(queueViaStack.dequeue());
 
-        SetOfStacks stack = new SetOfStacks(5);
+        SetOfStacks stack = new SetOfStacks(2);
 
         stack.push(1);
         stack.push(2);
@@ -59,10 +59,12 @@ public class Main {
         stack.push(4);
         stack.push(5);
         stack.push(6);
-        stack.push(6);
-        stack.push(6);
+        stack.push(7);
+        stack.push(8);
 
-        System.out.println(stack.getStacks());
+        System.out.println(stack.popAt(0));
+        System.out.println(stack.popAt(1));
+        System.out.println(stack.popAt(1));
 
 
     }

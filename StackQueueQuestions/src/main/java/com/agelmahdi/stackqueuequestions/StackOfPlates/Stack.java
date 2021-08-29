@@ -23,10 +23,12 @@ public class Stack {
         if (head == null){
             head = new Node();
             head= node;
+            tail=node;
             size= 1;
         }
         else {
             node.next = head;
+            head.prev = node;
             head = node;
             size++;
         }
@@ -40,9 +42,16 @@ public class Stack {
         int value = head.value;
 
         head = head.next;
-
         size--;
         return value;
+    }
+
+    public int removeLast(){
+        Node last = tail;
+        tail =tail.prev;
+        size--;
+
+        return last.value;
     }
 
     public boolean isFull(){
