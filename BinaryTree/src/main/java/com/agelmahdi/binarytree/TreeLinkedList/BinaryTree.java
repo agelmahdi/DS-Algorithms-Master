@@ -107,39 +107,39 @@ public class BinaryTree {
         // Space complexity O(n)
     }
 
-//    public boolean insert(String value) {
-//        Node newNode = new Node();
-//        newNode.value = value;
-//
-//        if (root == null) {
-//            root = newNode;
-//            return true;
-//        }
-//        Queue<Node> queue = new LinkedList<>();
-//        ((LinkedList<Node>) queue).add(root);
-//
-//        while (!queue.isEmpty()) {// ------> Time complexity O(n)
-//            Node node = queue.remove();
-//            if (node.left == null) {
-//                node.left = newNode;
-//                return true;
-//
-//            } else if (node.right == null) {
-//                node.right = newNode;
-//                return true;
-//
-//            } else {
-//                ((LinkedList<Node>) queue).add(node.left);
-//                ((LinkedList<Node>) queue).add(node.right);
-//            }
-//
-//
-//        }
-//
-//        return false;
-//        // Time complexity O(n)
-//        // Space complexity O(n)
-//    }
+    public boolean insert(String value) {
+        Node newNode = new Node();
+        newNode.value = value;
+
+        if (root == null) {
+            root = newNode;
+            return true;
+        }
+        Queue<Node> queue = new LinkedList<>();
+        ((LinkedList<Node>) queue).add(root);
+
+        while (!queue.isEmpty()) {// ------> Time complexity O(n)
+            Node node = queue.remove();
+            if (node.left == null) {
+                node.left = newNode;
+                return true;
+
+            } else if (node.right == null) {
+                node.right = newNode;
+                return true;
+
+            } else {
+                ((LinkedList<Node>) queue).add(node.left);
+                ((LinkedList<Node>) queue).add(node.right);
+            }
+
+
+        }
+
+        return false;
+        // Time complexity O(n)
+        // Space complexity O(n)
+    }
 
 
 }
