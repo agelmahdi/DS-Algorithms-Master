@@ -1,6 +1,4 @@
-package com.agelmahdi.binarytree.TreeLinkedList;
-
-import java.security.PublicKey;
+package com.agelmahdi.binarytree.BinaryTreeLinkedList;
 
 public class Node {
     public Node right;
