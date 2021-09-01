@@ -152,11 +152,11 @@ public class BinaryTree {
     public void deleteNode(String value) {
         Queue<Node> queue = new LinkedList<>();
         ((LinkedList<Node>) queue).add(root);
-        while (!queue.isEmpty()) {
+        while (!queue.isEmpty()) { //------------------------->O(n)
             Node current = queue.remove();
             if (current.value.equals(value)){
-                current.value = getDeepestNode().value;
-                deleteDeepestNode();
+                current.value = getDeepestNode().value; //---->O(n) // it runs separately, nested loop not found so it takes O(N) not O(N^2)
+                deleteDeepestNode(); //----------------------->O(n) // it runs separately, nested loop not found so it takes O(N) not O(N^2)
                 return;
             }
             if (current.left!=null){
@@ -166,7 +166,8 @@ public class BinaryTree {
                 ((LinkedList<Node>) queue).add(current.right);
             }
         }
-
+        // Time Complexity O(n)
+        // Space Complexity O(n)
     }
 
     private Node getDeepestNode() {
