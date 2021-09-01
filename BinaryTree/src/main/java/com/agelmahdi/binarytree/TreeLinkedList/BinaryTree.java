@@ -141,5 +141,72 @@ public class BinaryTree {
         // Space complexity O(n)
     }
 
+    //Delete a node
+    /* Level order traversal
+     * Step 1: Find the Node
+     * Step 2: Find the Deepest node is the one which should be visited last in the case of Level order traversal
+     * Step 3: Set the Deepest node to the current node
+     * Step 4: Delete Deepest node
+     *  */
+
+    public void deleteNode(String value) {
+        Queue<Node> queue = new LinkedList<>();
+        ((LinkedList<Node>) queue).add(root);
+        while (!queue.isEmpty()) {
+            Node current = queue.remove();
+            if (current.value.equals(value)){
+                current.value = getDeepestNode().value;
+                deleteDeepestNode();
+                return;
+            }
+            if (current.left!=null){
+                ((LinkedList<Node>) queue).add(current.left);
+            }
+            if (current.right!=null){
+                ((LinkedList<Node>) queue).add(current.right);
+            }
+        }
+
+    }
+
+    private Node getDeepestNode() {
+        Queue<Node> queue = new LinkedList<Node>();
+        ((LinkedList<Node>) queue).add(root);
+        Node node = null;
+        while (!queue.isEmpty()) {
+            node = queue.remove();
+            if (node.left != null) {
+                ((LinkedList<Node>) queue).add(node.left);
+            }
+            if (node.right != null) {
+                ((LinkedList<Node>) queue).add(node.right);
+            }
+
+        }
+        return node;
+    }
+
+    private void deleteDeepestNode() {
+        Queue<Node> queue = new LinkedList<>();
+        ((LinkedList<Node>) queue).add(root);
+        Node prev, current = null;
+        while (!queue.isEmpty()) {
+            prev = current;
+            current = queue.remove();
+
+            if (current.left == null) {
+                prev.right = null;
+                return;
+            } else if (current.right == null) {
+                current.left = null;
+                return;
+            }
+            ((LinkedList<Node>) queue).add(current.left);
+            ((LinkedList<Node>) queue).add(current.right);
+        }
+    }
+
+
+
 
 }

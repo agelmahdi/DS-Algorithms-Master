@@ -41,8 +41,12 @@ public class Main {
         System.out.print("\n\n");
 
         System.out.println("Search in BT");
-
-        System.out.println(binaryTree.searchBT("Ny"));
+        binaryTree.deleteNode("N2");
+        binaryTree.deleteNode("N3");
+        binaryTree.deleteNode("N5");
+        System.out.println();
+        binaryTree.levelTraversal();
+        System.out.print("\n\n");
 
     }
 }
