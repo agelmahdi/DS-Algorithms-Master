@@ -1,6 +1,5 @@
-package com.agelmahdi.binarytree.TreeLinkedList;
+package com.agelmahdi.binarytree.BinaryTreeLinkedList;
 
-import java.security.PublicKey;
 import java.util.LinkedList;
 import java.util.Queue;
 
