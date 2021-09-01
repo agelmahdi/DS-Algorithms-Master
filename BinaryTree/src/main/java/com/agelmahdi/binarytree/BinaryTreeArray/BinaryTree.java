@@ -95,10 +95,10 @@ public class BinaryTree {
         return -1;
     }
 
-    // Time complexity O(1)
+    // Time complexity O(n)
     // Space complexity O(1)
     public void delete(String value) {
-        int location = search(value);
+        int location = search(value); //------>O(n)
         if (location == -1) {
             return;
         }
