@@ -1,1 +1,1 @@
-include ':app', ':Recursion', ':BigO', ':Arrays', ':LinkedList', ':CircularLinkedList', ':DoublyLinkedList', ':CircularDoublyLinkedList', ':LinkedListProblems', ':StackArray', ':StackLinkedList', ':QueueArray',':StackQueueQuestions', ':SimpleTree', ':BinaryTree'
+include ':app', ':Recursion', ':BigO', ':Arrays', ':LinkedList', ':CircularLinkedList', ':DoublyLinkedList', ':CircularDoublyLinkedList', ':LinkedListProblems', ':StackArray', ':StackLinkedList', ':QueueArray',':StackQueueQuestions', ':SimpleTree', ':BinaryTree', ':BinarySearchTree'

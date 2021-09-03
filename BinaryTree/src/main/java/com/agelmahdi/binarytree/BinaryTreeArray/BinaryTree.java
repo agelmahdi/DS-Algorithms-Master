@@ -77,6 +77,7 @@ public class BinaryTree {
         System.out.print(arr[index] + " ");
 
     }
+
     // Time complexity O(n)
     // Space complexity O(1)
     public void levelOrderTraversal() {
@@ -84,6 +85,7 @@ public class BinaryTree {
             System.out.print(arr[1] + " ");
         }
     }
+
     // Time complexity O(n)
     // Space complexity O(1)
     public int search(String value) {
@@ -105,6 +107,7 @@ public class BinaryTree {
         arr[location] = arr[lastVisitedIndex];
         lastVisitedIndex--;
     }
+
     // Time complexity O(1)
     // Space complexity O(1)
     public void deleteBT() {
