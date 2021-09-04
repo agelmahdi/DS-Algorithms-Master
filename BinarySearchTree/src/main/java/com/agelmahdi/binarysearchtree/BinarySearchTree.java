@@ -20,7 +20,7 @@ public class BinarySearchTree {
             return current;
         } else {
             current.right = insert(current.right, value);//------------>O(n/2)
-            return insert(current.right, value);
+            return current;
         }
         // It takes half of its operation left or right
         // Time complexity O(log(n))
@@ -29,7 +29,7 @@ public class BinarySearchTree {
     }
 
     public void insert(int value) {
-       root = insert(root, value);
+        root = insert(root, value);
     }
 
     public void preOrderTraversal(Node node) {
@@ -39,6 +39,8 @@ public class BinarySearchTree {
         System.out.print(node.value + " ");
         preOrderTraversal(node.left);
         preOrderTraversal(node.right);
+        // Time complexity O(n)
+        // Space complexity O(n)
 
     }
 
@@ -50,6 +52,8 @@ public class BinarySearchTree {
         inOrderTraversal(node.left);
         System.out.print(node.value + " ");
         inOrderTraversal(node.right);
+        // Time complexity O(n)
+        // Space complexity O(n)
 
     }
 
@@ -61,6 +65,8 @@ public class BinarySearchTree {
         postOrderTraversal(node.left);
         postOrderTraversal(node.right);
         System.out.print(node.value + " ");
+        // Time complexity O(n)
+        // Space complexity O(n)
 
     }
 
@@ -85,15 +91,67 @@ public class BinarySearchTree {
     }
 
     public Node search(Node node, int value) {
-       return node;
+        if (node == null) {
+            return null;
+        } else if (node.value == value) {
+            return node;
+        } else if (value < node.value) {
+            return search(node.left, value);//------------>O(n/2)
+        } else {
+            return search(node.right, value);//------------>O(n/2)
+        }
 
+        // Time complexity O(log(n))
+        // Space complexity O(log(n))
     }
 
-    public void delete() {
+    /*
+     * Case 1: the node to be deleted is a leaf node
+     * case 2: the node has one child
+     * case 3: the node has two child find the successor which have the smallest in right half
+     * */
 
+
+    //the successor of a given node
+    public static Node findMin(Node root) {
+        if (root.left == null) {
+            return root;
+        } else {
+            return findMin(root.left);
+        }
+    }
+
+    public Node delete(Node root, int value) {
+        if (root == null) {
+            return null;
+        }
+
+        if (value < root.value) {
+            root.left = delete(root.left, value);//------------>O(n/2)
+        } else if (value > root.value) {
+            root.right = delete(root.right, value);//------------>O(n/2)
+        } else {
+            if (root.left != null && root.right != null) { //the node has two child
+                Node minRight = findMin(root.right); //------------>O(n/2)
+                root.value = minRight.value;
+                root.right = delete(root.right, minRight.value);//------------>O(n/2)
+
+            } else if (root.left != null) { //the node has one child
+                root = root.left;
+            } else if (root.right != null) { //the node has one child
+                root = root.right;
+            } else {
+                root = null; //the node to be deleted is a leaf node
+            }
+
+        }
+        return root;
+
+        // Time complexity O(log(n))
+        // Space complexity O(log(n))
     }
 
     public void deleteBST() {
-
+        root =null;
     }
 }
