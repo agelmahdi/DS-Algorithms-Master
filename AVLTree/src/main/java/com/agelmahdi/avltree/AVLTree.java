@@ -1,6 +1,9 @@
 package com.agelmahdi.avltree;
 
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class AVLTree {
     Node root;
     static final int COUNT = 5;
@@ -114,6 +117,87 @@ public class AVLTree {
         return getHeight(node.left) - getHeight(node.right);
     }
 
+    private int getLevel(int value) {
 
+        return getLevelOfNode(root, value, 1);
+    }
+
+    public Node search(Node root, int value) {
+        if (root == null) {
+            return null;
+        } else if (root.value == value) {
+            return root;
+        } else if (value < root.value) {
+            return search(root.left, value);
+        } else {
+            return search(root.right, value);
+        }
+
+    }
+
+    public static int getLevelOfNode(Node root, int value, int level) {
+        if (root == null)
+            return 0;
+        if (root.value == value) {
+            return level;
+        }
+
+
+        int result = getLevelOfNode(root.left, value, level + 1);
+        if (result != 0) {
+            // If found in left subtree , return
+            return result;
+        }
+        result = getLevelOfNode(root.right, value, level + 1);
+
+        return result;
+    }
+
+    public void levelOrderTraversal() {
+        int level = 1;
+        Queue<Node> queue = new LinkedList<>();
+        ((LinkedList<Node>) queue).add(root);
+        while (!queue.isEmpty()) {
+            Node node = queue.remove();
+            System.out.print(node.value + "  ");
+
+            if (node.left != null) {
+                ((LinkedList<Node>) queue).add(node.left);
+
+            }
+            if (node.right != null) {
+                ((LinkedList<Node>) queue).add(node.right);
+
+            }
+        }
+    }
+
+    static void print2DUtil(Node root, int space) {
+        // Base case
+        if (root == null)
+            return;
+
+        // Increase distance between levels
+        space += COUNT;
+
+        // Process right child first
+        print2DUtil(root.right, space);
+
+        // Print current node after space
+        // count
+        System.out.print("\n");
+        for (int i = COUNT; i < space; i++)
+            System.out.print(" ");
+        System.out.print(root.value + "\n");
+
+        // Process left child
+        print2DUtil(root.left, space);
+    }
+
+    // Wrapper over print2DUtil()
+    static void print2D(Node root) {
+        // Pass initial space count as 0
+        print2DUtil(root, 0);
+    }
 
 }
