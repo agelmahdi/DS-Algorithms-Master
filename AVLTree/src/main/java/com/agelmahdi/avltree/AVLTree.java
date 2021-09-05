@@ -226,20 +226,21 @@ public class AVLTree {
         if (root.value == value) {
             return level;
         }
-
-
-        int result = getLevelOfNode(root.left, value, level + 1); // -----> O(n/2)
-        if (result != 0) {
-            // If found in left subtree , return
-            return result;
+        int result;
+        if (value < root.value) {
+            result = getLevelOfNode(root.left, value, level + 1); // -----> O(n/2)
+            if (result != 0) {
+                // If found in left subtree , return
+                return result;
+            }
+        } else {
+            result = getLevelOfNode(root.right, value, level + 1);  // -----> O(n/2)
         }
-        result = getLevelOfNode(root.right, value, level + 1);  // -----> O(n/2)
 
         return result;
 
-
-        // Time complexity O(n)
-        // Space complexity O(n)
+        // Time complexity O(log(n))
+        // Space complexity O(log(n))
     }
 
     public void levelOrderTraversal() {
