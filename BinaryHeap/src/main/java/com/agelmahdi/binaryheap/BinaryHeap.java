@@ -50,6 +50,75 @@ public class BinaryHeap {
     }
 
 
+
+    // only extract a root node
+    public int extractHeapRoot(){
+        if (isEmpty()){
+            throw new NullPointerException();
+        }
+
+        int extracted = heap[1];
+        heap[1] = heap[lastVisitedIndex];
+        lastVisitedIndex--;
+        heapifyTopBottom(1);
+        return extracted;
+
+    }
+    private void heapifyTopBottom(int root) {
+        int left = 2 * root;
+        int right = 2 * root + 1;
+        int swapChild = 0;
+        if (lastVisitedIndex < left) {
+            return;
+        }
+        if (heapType.equals(MIN_HEAP)) {
+            if (lastVisitedIndex == left) { // has only one child
+                if (heap[root] > heap[left]) {
+                    int temp = heap[root];
+                    heap[root] = heap[left];
+                    heap[left] = temp;
+                }
+                return;
+            } else { // has two children take the smallest child
+                if (heap[left] < heap[right]) {
+                    swapChild = left;
+                } else {
+                    swapChild = right;
+                }
+
+                if (heap[root] > heap[swapChild]) {
+                    int temp = heap[root];
+                    heap[root] = heap[swapChild];
+                    heap[swapChild] = temp;
+                }
+                return;
+            }
+
+        } else if (heapType.equals(MAX_HEAP)) {
+            if (lastVisitedIndex == left) { // has only one child
+                if (heap[left] > heap[root]) {
+                    int temp = heap[root];
+                    heap[root] = heap[left];
+                    heap[left] = temp;
+                }
+            } else {
+                if (heap[right] > heap[left]) { // has two children take the biggest child
+                    swapChild = right;
+                } else {
+                    swapChild = left;
+                }
+
+                if (heap[swapChild] > heap[root]) {
+                    int temp = heap[root];
+                    heap[root] = heap[swapChild];
+                    heap[swapChild] = temp;
+                }
+            }
+        }
+        heapifyTopBottom(swapChild);
+
+    }
+
     public void levelOrderTraversal() {
         for (int i = 1; i <= lastVisitedIndex; i++) {
             System.out.print(heap[i] + " ");
