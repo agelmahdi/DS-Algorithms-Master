@@ -45,9 +45,9 @@ public class AVLTree {
             newNode.height = 1;
             return newNode;
         } else if (value < root.value) { // value is the last value in the tree
-            root.left = insert(root.left, value);
+            root.left = insert(root.left, value);// -----> O(n/2)
         } else {
-            root.right = insert(root.right, value);
+            root.right = insert(root.right, value);// -----> O(n/2)
         }
 
         root.height = 1 + Math.max(getHeight(root.left), getHeight(root.right));
@@ -59,8 +59,8 @@ public class AVLTree {
         }
 
         if (isBalanced > 1 && value > root.left.value) { // left Right condition
-            root.left = rotateLeft(root.left); // left child
-            return rotateRight(root);
+            root.left = rotateLeft(root.left); // left child ---> O(1)
+            return rotateRight(root);  //---> O(1)
 
         }
 
@@ -69,14 +69,15 @@ public class AVLTree {
         }
 
         if (isBalanced < -1 && value < root.right.value) { // Right Left condition
-            root.right = rotateRight(root.right); // Right child
-            return rotateLeft(root);
+            root.right = rotateRight(root.right); // Right child ---> O(1)
+            return rotateLeft(root); //---> O(1)
 
         }
 
 
         return root;
-
+        // Time complexity O(log(n))
+        // Space complexity O(log(n))
     }
 
 
@@ -111,7 +112,7 @@ public class AVLTree {
             return root;
         }
 
-        return findMin(root.left);
+        return findMin(root.left); // -----> O(n/2)
     }
 
     public Node delete(Node root, int value) {
@@ -119,14 +120,14 @@ public class AVLTree {
             return root;
         }
         if (value < root.value) {
-            root.left = delete(root.left, value);
+            root.left = delete(root.left, value); // -----> O(n/2)
         } else if (value > root.value) {
-            root.right = delete(root.right, value);
+            root.right = delete(root.right, value); // -----> O(n/2)
         } else {
             if (root.left != null && root.right != null) { //the node has two child
-                Node successorOfRight = findMin(root.right);
+                Node successorOfRight = findMin(root.right); // -----> O(log(n))
                 root.value = successorOfRight.value;
-                root.right = delete(root.right, successorOfRight.value);
+                root.right = delete(root.right, successorOfRight.value);// -----> O(n/2)
 
             } else if (root.left != null) {
                 root = root.left;
@@ -159,7 +160,8 @@ public class AVLTree {
         }
 
         return root;
-
+        // Time complexity O(log(n))
+        // Space complexity O(log(n))
     }
 
 
@@ -214,6 +216,8 @@ public class AVLTree {
             return search(root.right, value);
         }
 
+        // Time complexity O(log(n))
+        // Space complexity O(log(n))
     }
 
     public static int getLevelOfNode(Node root, int value, int level) {
@@ -224,14 +228,18 @@ public class AVLTree {
         }
 
 
-        int result = getLevelOfNode(root.left, value, level + 1);
+        int result = getLevelOfNode(root.left, value, level + 1); // -----> O(n/2)
         if (result != 0) {
             // If found in left subtree , return
             return result;
         }
-        result = getLevelOfNode(root.right, value, level + 1);
+        result = getLevelOfNode(root.right, value, level + 1);  // -----> O(n/2)
 
         return result;
+
+
+        // Time complexity O(n)
+        // Space complexity O(n)
     }
 
     public void levelOrderTraversal() {
@@ -251,6 +259,9 @@ public class AVLTree {
 
             }
         }
+
+        // Time complexity O(n)
+        // Space complexity O(n)
     }
 
     static void print2DUtil(Node root, int space) {
@@ -273,6 +284,9 @@ public class AVLTree {
 
         // Process left child
         print2DUtil(root.left, space);
+
+        // Time complexity O(n)
+        // Space complexity O(n)
     }
 
     // Wrapper over print2DUtil()
