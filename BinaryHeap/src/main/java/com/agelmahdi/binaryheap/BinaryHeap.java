@@ -22,6 +22,9 @@ public class BinaryHeap {
         heap[lastVisitedIndex + 1] = value;
         lastVisitedIndex++;
         heapifyBottomTop(lastVisitedIndex);
+
+        // Time Complexity O(log(n))
+        // Space Complexity O(log(n))
     }
 
     private void heapifyBottomTop(int index) {
@@ -45,7 +48,10 @@ public class BinaryHeap {
             }
         }
 
-        heapifyBottomTop(parent);
+        heapifyBottomTop(parent); //------ O(log(n))
+
+        // Time Complexity O(log(n))
+        // Space Complexity O(log(n))
 
     }
 
@@ -60,8 +66,11 @@ public class BinaryHeap {
         int extracted = heap[1];
         heap[1] = heap[lastVisitedIndex];
         lastVisitedIndex--;
-        heapifyTopBottom(1);
+        heapifyTopBottom(1);//------ O(log(n)
         return extracted;
+
+        // Time Complexity O(log(n))
+        // Space Complexity O(log(n))
 
     }
     private void heapifyTopBottom(int root) {
@@ -115,7 +124,10 @@ public class BinaryHeap {
                 }
             }
         }
-        heapifyTopBottom(swapChild);
+        heapifyTopBottom(swapChild); //------ O(log(n))
+
+        // Time Complexity O(log(n))
+        // Space Complexity O(log(n))
 
     }
 
