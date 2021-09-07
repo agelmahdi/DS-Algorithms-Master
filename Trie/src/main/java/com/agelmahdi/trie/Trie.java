@@ -41,5 +41,31 @@ public class Trie {
 
     }
 
+    /*
+     * Search
+     *  Case 1: String does not exist
+     *  Case 2: String exists
+     *  Case 3: String's prefix of another string, but its does not exist
+     * */
 
+    public boolean search(String word) {
+        TrieNode current = root;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            TrieNode node = current.getChildren().get(c);
+            if (node == null) {
+                System.out.println("word does not exists in Trie");
+                return false;
+            }
+            current = node;
+        }
+        if (current.isLeaf()) {
+            System.out.println("word exists in Trie");
+            return true;
+        } else {
+            System.out.println("word does not exists in Trie, but prefix is found");
+        }
+
+        return current.isLeaf();
+    }
 }
