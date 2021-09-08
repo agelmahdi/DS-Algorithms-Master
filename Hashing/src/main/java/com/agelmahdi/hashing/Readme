@@ -1,30 +1,31 @@
 
 
 
-1.What is Hashing?
-- Hashing is a method of sorting and indexing data. which allow large amount of data to be indexed using keys
+1. What is Hashing?
+- Hashing is a method of sorting and indexing data. which allow a large amount of data to be indexed using keys
 
-2.Why Hashing?
-- it is a time efficient in case of SEARCH operation
+2. Why Hashing?
+- it is a time-efficient in the case of SEARCH operation
    -> Arrays -> O(log(n))
    -> LinkedList -> O(n)
    -> Tree -> O(log(n))
    -> Hashing -> O(1) / O(n) in case of collision
 
 3. Hashing Terminology
- - Hash function: it is a function that can be used to map of arbitrary size to data of fixed size
+ - Hash function: it is a function that can be used to map arbitrary size to data of fixed size
  - Key: the input data is given by a user
- - Hash value: A value that is returned by hash function
- - Hash Table: its a data structure which implements an associative array abstract data type, a structure that can map key to values
- - Collision: A Collision occurs when two different keys to hash function produced the same output
+ - Hash value: A value that is returned by the hash function
+ - Hash Table: its a data structure that implements an associative array abstract data type, a structure that can map key to values
+ - Collision: A Collision occurs when two different keys to the hash function produced the same output
 
 4. Properties of a good hash function
- - it distributes hash values uniformaly across hash tables
+ - it distributes hash values uniformly across hash tables
  - it has to use all the input data
 
 5. Collision Resolution technique
-  1. Direct Chaining: hash table is an array of references using a linkedList
+  1. Direct Chaining: hash table is an array of references using a LinkedList
   2. Open Addressing
     - Linear probing
     - Quadratic probing
     - Double probing
+
