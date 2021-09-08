@@ -9,8 +9,8 @@ public class DirectChaining {
         hashTable = new LinkedList[maxChain];
     }
 
-
-    private int modASCII(String word, int cellsNumber) {
+    //Hash function calc the sum ASCII codes of characters mod by cellsNumber
+    private int modASCIIHashFunction(String word, int cellsNumber) {
         char[] c = word.toCharArray();
         int sum, i;
         for (sum = 0, i = 0; i < c.length; i++) {
@@ -19,16 +19,32 @@ public class DirectChaining {
         return sum % cellsNumber;
     }
 
-    public void insertHashTable(String word) {
-        int index = modASCII(word, hashTable.length);
+    public void insertHashTable(String key) {
+        int index = modASCIIHashFunction(key, hashTable.length);
 
         if (hashTable[index] == null) {
             hashTable[index] = new LinkedList<>();
-            hashTable[index].add(word);
+            hashTable[index].add(key);
         } else {
-            hashTable[index].addLast(word);
+            hashTable[index].addLast(key);
 
         }
+    }
+
+    public boolean searchHashTable(String key) {
+        int index = modASCIIHashFunction(key, hashTable.length);
+        return hashTable[index] != null && hashTable[index].contains(key);
+    }
+
+    public boolean deleteKeyHashTable(String key) {
+        int index = modASCIIHashFunction(key, hashTable.length);
+        boolean isFound = searchHashTable(key);
+
+        if (isFound) {
+            hashTable[index].remove(key);
+            return true;
+        }
+        return false;
     }
 
     public void DisplayHashTable() {
