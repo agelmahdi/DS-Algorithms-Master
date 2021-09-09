@@ -1,6 +1,6 @@
 
 1. What is Hashing?
-- Hashing is a method of sorting and indexing data. which allow a large amount of data to be indexed using keys
+- Hashing is a method of sorting and indexing data. which allow a large amount of data to be indexed using keys.
 
 2. Why Hashing?
 - it is a time-efficient in the case of SEARCH operation
@@ -10,25 +10,46 @@
    -> Hashing -> O(1) / O(n) in case of collision
 
 3. Hashing Terminology
- - Hash function: it is a function that can be used to map arbitrary size to data of fixed size
- - Key: the input data is given by a user
- - Hash value: A value that is returned by the hash function
- - Hash Table: its a data structure that implements an associative array abstract data type, a structure that can map key to values
- - Collision: A Collision occurs when two different keys to the hash function produced the same output
+ - Hash function: it is a function that can be used to map arbitrary size to data of fixed size.
+ - Key: the input data is given by a user.
+ - Hash value: A value that is returned by the hash function.
+ - Hash Table: its a data structure that implements an associative array abstract data type, a structure that can map key to values.
+ - Collision: A Collision occurs when two different keys to the hash function produced the same output.
 
-4. Properties of a good hash function
- - it distributes hash values uniformly across hash tables
- - it has to use all the input data
+4. Properties of a good hash function.
+ - it distributes hash values uniformly across hash tables.
+ - it has to use all the input data.
 
 5. Collision Resolution technique
 
-  1. Direct Chaining: hash table is an array of references using a LinkedList
+  1. Direct Chaining: hash table is an array of references using a LinkedList.
 
-  2. Open Addressing: Colliding elements are stored in another vacant cell. During storage and lookup these are found through so called probing
+  2. Open Addressing: Colliding elements are stored in another vacant cell. During storage and lookup, these are found through so-called probing.
 
-    - Linear probing: it places new key into closest following empty cell
+     Linear probing: it places a new key into the closest following empty cell.
 
-    - Quadratic probing : add arbitrary quadratic polynomial to the index until an empty cell is found
+     Quadratic probing: add arbitrary quadratic polynomial to the index until an empty cell is found.
 
-    - Double probing : interval between probes is computed by another hash function
+     Double probing: the interval between probes is computed by another hash function.
+
+6. Pros and cons of Collision Resolution technique
+
+ 1. Direct Chaining
+  pros - Hash table never gets full.
+  cons - Huge linked list causes performance leaks (Time complexity for search operation will become O(n)).
+  -> Frequently used to perform deletion operation.
+
+ 2. Open addressing
+   pros - Easy implementation.
+   cons - when hash table is full, creation of new hash table affects the performance (Time complexity for search operation will become O(n)).
+   -> Always used if the input size is known.
+
+7. Pros and cons of Hashing
+ pros - on average insertion/deletion/search operations take O(1) time complexity
+ cons - when hash function is not good enough insertion/deletion/search operations take O(n) time complexity
+   -- Hashing Vs Other in worst case of insertion/deletion/search operations
+   -> Arrays -> O(n)
+   -> LinkedList -> O(n)
+   -> Tree -> O(log(n))
+   -> Hashing -> O(1) / O(n) in case of not good enough hash function
 
