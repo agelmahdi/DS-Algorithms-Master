@@ -64,6 +64,25 @@ public class LinearProbing {
         usedCell++;
     }
 
+    public int search(String key) {
+        int index = hashFunction(key, hashTable.length);
+        for (int i = index; i < index + hashTable.length; i++) {
+            int newIndex = i % hashTable.length;
+            if (hashTable[newIndex] != null && hashTable[newIndex].equals(key)) {
+                return newIndex;
+            }
+        }
+        return -1;
+    }
+
+
+    public void delete(String key) {
+        int index = search(key);
+        if (index != -1) {
+            hashTable[index] = null;
+        }
+    }
+
     public void DisplayHashTable() {
         if (hashTable == null) {
             System.out.println("Hash table does not exists");

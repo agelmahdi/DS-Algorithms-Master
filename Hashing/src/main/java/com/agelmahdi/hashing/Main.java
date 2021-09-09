@@ -5,7 +5,7 @@ import com.agelmahdi.hashing.OpenAddressing.LinearProbing;
 public class Main {
 
     public static void main(String[] args) {
-        LinearProbing directChaining = new LinearProbing(3);
+        LinearProbing directChaining = new LinearProbing(1);
         directChaining.insert("a");
         directChaining.insert("b");
         directChaining.insert("c");
@@ -13,6 +13,9 @@ public class Main {
         directChaining.insert("e");
         directChaining.insert("f");
         directChaining.insert("g");
+
+        directChaining.delete("a");
+        directChaining.insert("a");
 
         directChaining.DisplayHashTable();
     }
