@@ -1,6 +1,4 @@
 
-
-
 1. What is Hashing?
 - Hashing is a method of sorting and indexing data. which allow a large amount of data to be indexed using keys
 
@@ -30,6 +28,7 @@
 
     - Linear probing: it places new key into closest following empty cell
 
-    - Quadratic probing
-    - Double probing
+    - Quadratic probing : add arbitrary quadratic polynomial to the index until an empty cell is found
+
+    - Double probing : interval between probes is computed by another hash function
 

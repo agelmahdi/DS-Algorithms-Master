@@ -1,11 +1,11 @@
 package com.agelmahdi.hashing;
 
-import com.agelmahdi.hashing.OpenAddressing.LinearProbing;
+import com.agelmahdi.hashing.OpenAddressing.DoubleProbing;
 
 public class Main {
 
     public static void main(String[] args) {
-        LinearProbing directChaining = new LinearProbing(1);
+        DoubleProbing directChaining = new DoubleProbing(1);
         directChaining.insert("a");
         directChaining.insert("b");
         directChaining.insert("c");
@@ -14,7 +14,6 @@ public class Main {
         directChaining.insert("f");
         directChaining.insert("g");
 
-        directChaining.delete("a");
         directChaining.insert("a");
 
         directChaining.DisplayHashTable();
