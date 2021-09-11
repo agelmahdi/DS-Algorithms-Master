@@ -1,0 +1,70 @@
+
+ 1. What is sorting?
+  - by definition sorting refers to arranging data in a particular format: either ascending or descending
+
+ 2. types of sorting
+
+                           Sorting
+                         /         \
+                        /           \
+                       /             \
+                Space used           Stability
+                  /    \              /    \
+                 /      \            /      \
+                /        \          /        \
+            in space  out space   Stable    Unstable
+
+   A. Space Used
+
+    - In Space sorting: sorting algorithms which does not require any extra space for sorting.
+     Ex-> Bubble sort
+
+    - Out Space sorting: sorting algorithms that require extra space for sorting.
+     Ex-> Merge sort
+
+   B. Stability
+
+    - Stable sorting: if a sorting algorithm after sorting does not change the sequence of the similar content in which they appear in the original one.
+     Ex-> Insertion sort
+
+    - Unstable sorting: if a sorting algorithm after sorting changes the sequence of the similar content in which they appear in the original one.
+     Ex-> Quick sort
+
+ 3. Sorting terminology
+
+     - Increasing order: if the successive element is greater than the previous one.
+       Ex-> 1, 3, 5, 7, 9, 11
+
+     - Decreasing order: if the successive element is less than the previous one.
+       Ex-> 11, 9, 7, 5, 3, 1
+
+     - Non-Increasing order: if the successive element is Less than or Equal to its previous element in the sequence.
+       Ex-> 11, 9, 7, 5, 5, 3, 1
+
+     - Non-Decreasing order: if the successive element is Greater than or Equal to its previous element in the sequence.
+       Ex-> 1, 3, 5, 7, 7, 9, 11
+
+ 4. Sorting algorithms
+
+   A. Bubble Sort: referred also as Sinking sort in which Repeatedly compare each pair of adjacent items and swap them if they are in the wrong order.
+
+     -> When to use?
+      - When the input is almost sorted
+      - Space is a concern
+      - Easy implementation
+
+     -> When to avoid?
+      - Average time complexity is poor.
+
+   B. Selection Sort.
+   C. Insertion Sort.
+   D. Bucket Sort.
+   E. Merge Sort.
+   F. Quick Sort.
+   H. Heap Sort.
+
+ 5. Algorithm priority selection:
+
+   A. Stability.
+   B. Space Efficient.
+   C. Time Efficient.
