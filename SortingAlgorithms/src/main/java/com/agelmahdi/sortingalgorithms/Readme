@@ -49,23 +49,36 @@
    A. Bubble Sort: referred also as Sinking sort in which Repeatedly compare each pair of adjacent items and swap them if they are in the wrong order.
 
      -> When to use?
-      - When the input is almost sorted
+      - The input is almost sorted
       - Space is a concern
       - Easy implementation
 
      -> When to avoid?
       - Average time complexity is poor.
 
-   B. Selection Sort: Repeatedly find the minimum element and move it to the sorted part of the array to make the unsorted part sorted.
+  B. Selection Sort: Repeatedly find the minimum element and move it to the sorted part of the array to make the unsorted part sorted.
 
      -> When to use?
-      - When we have insufficient memory
+      - We have insufficient memory
       - Easy implementation
 
      -> When to avoid?
-       - When time is a consern.
+       - Time is a concern.
 
-   C. Insertion Sort.
+   C. Insertion Sort:
+
+     A. Divide the given array into two parts,
+     B. then, take the first element from the unsorted array and find the correct position in the sorted array,
+     C. then, repeat until the unsorted array is empty.
+
+      -> When to use?
+       - We have a continuous inflow of numbers and we want to keep them sorted.
+       - We have insufficient memory.
+       - Easy implementation.
+
+      -> When to avoid?
+       - Time is a concern.
+
    D. Bucket Sort.
    E. Merge Sort.
    F. Quick Sort.
