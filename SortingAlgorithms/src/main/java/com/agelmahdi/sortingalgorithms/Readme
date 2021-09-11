@@ -17,7 +17,7 @@
    A. Space Used
 
     - In Space sorting: sorting algorithms which does not require any extra space for sorting.
-     Ex-> Bubble sort
+     Ex-> Bubble sort, Selection sort
 
     - Out Space sorting: sorting algorithms that require extra space for sorting.
      Ex-> Merge sort
@@ -56,7 +56,15 @@
      -> When to avoid?
       - Average time complexity is poor.
 
-   B. Selection Sort.
+   B. Selection Sort: Repeatedly find the minimum element and move it to the sorted part of the array to make the unsorted part sorted.
+
+     -> When to use?
+      - When we have insufficient memory
+      - Easy implementation
+
+     -> When to avoid?
+       - When time is a consern.
+
    C. Insertion Sort.
    D. Bucket Sort.
    E. Merge Sort.
