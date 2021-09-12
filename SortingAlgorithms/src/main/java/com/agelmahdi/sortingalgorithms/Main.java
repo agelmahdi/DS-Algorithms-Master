@@ -7,10 +7,12 @@ public class Main {
         SelectionSort selectionSort = new SelectionSort();
         InsertionSort insertionSort = new InsertionSort(InsertionSort.DESCENDING);
 
-        int[] arr = {9,4,2,4,6,7,8,9,2,4,50,8,10};
+        int[] arr = {9,4,2,4,6,7,8,9,2,4,8};
+        BucketSort bucketSort = new BucketSort(arr);
 
-        insertionSort.sort(arr);
-        insertionSort.print(arr);
+        bucketSort.sort();
+        System.out.println("\n\nSorted array");
+        bucketSort.print();
     }
 
 
