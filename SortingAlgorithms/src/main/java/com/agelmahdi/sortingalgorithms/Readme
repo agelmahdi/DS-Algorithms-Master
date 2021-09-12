@@ -91,7 +91,19 @@
       -> When to avoid?
        - Space is a concern.
 
-   E. Merge Sort.
+   E. Merge Sort:
+
+     A. is a divide and conquer algorithm
+     B. Divide the input array into two halves and we keep halving recursively until they become too small that cannot be broken further
+     C. Merge halves by sorting them
+
+      -> When to use?
+       - Stable sort is required.
+       - Average expected time O(n log(n)).
+
+      -> When to avoid?
+       - Space is a concern.
+
    F. Quick Sort.
    H. Heap Sort.
 
