@@ -8,12 +8,11 @@ public class Main {
         InsertionSort insertionSort = new InsertionSort(InsertionSort.DESCENDING);
         MergeSort mergeSort = new MergeSort();
         BucketSort bucketSort = new BucketSort(new int[2]);
-
+        QuickSort quickSort = new QuickSort();
         int[] arr = {9,4,2,4,6,7,8,9,2,4,8};
 
-        mergeSort.sort(arr);
-        System.out.println("\n\nSorted array");
-        mergeSort.print(arr);
+
+
     }
 
 
