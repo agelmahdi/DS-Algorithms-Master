@@ -1,0 +1,136 @@
+
+1. What is graph?
+  - Graph consists of a finite set of vertices or (Nodes) and a set of Edges which connect a pair of nodes.
+
+2. Graph Terminology
+  A. Vertices : are the node of the graph.
+  B. Edge: is the line that connects pairs of vertices.
+  C. Unweighted Graph:  A graph which does not have a weight associated with any edge.
+  D. Weighted Graph:  A graph which has a weight associated with any edge.
+  E. Undirected Graph:  In case the edges of the graph does not have a direction between them.
+  F. Directed Graph:  In case the edges of the graph have a direction between them.
+  G. Cyclic Graph:  a graph which has a least one loop.
+  H. Acyclic Graph:  a graph which has no loop.
+  I. Tree: Is a special case of directed acyclic graph.
+
+3. Graph Types:
+
+                           Graph
+                         /         \
+                        /           \
+                       /             \
+                  Directed          Undirected
+                  /    \              /    \
+                 /      \            /      \
+                /        \          /        \
+            Weighted  Unweighted  Weighted Unweighted
+             /    \                /    \
+            /      \              /      \
+           /        \            /        \
+      Positive    Negative    Positive  Negative
+
+
+   A.Unweighted - Undirected : No weight associated with any edges, No direction between edges
+
+               V1 - - -V3
+               |\       \
+               | \       \
+               |  \       \
+               |   \      V5
+               |    \     /
+               |     \   /
+               |      \ /
+               V2- - - V4
+   B.Unweighted - Directed : No weight associated with any edges, there is a direction between edges
+
+                V1 - - ->V3
+                ^ ^        ^
+                |  \        \
+                |   \        \
+                |    \       V5
+                |     \      ^
+                |      \    /
+                |       \  /
+                V2- - -> V4
+   C.Positive - weighted - Undirected : there is a positive weight associated with edges, No direction between edges
+
+                    5
+               V1 - - -V3
+               |\       \
+               | \       \ 1
+               |  \       \
+             2 |   \ 4     V5
+               |    \     /
+               |     \   / 7
+               |      \ /
+               V2- - - V4
+                   3
+   D.Positive - weighted - Directed : there is a positive weight associated with edges, there is a direction between edges
+
+                      5
+                 V1 - - -> V3
+                 ^ ^        ^
+                 |  \        \ 1
+                 |   \        \
+                 |    \ 4     V5
+                2|     \      ^
+                 |      \    /
+                 |       \  / 7
+                 V2- - -> V4
+                      3
+   E.Negative - weighted - Undirected : there is at least a negative weight associated with edges, No direction between edges
+
+                    -5
+                V1 - - -V3
+                |\       \
+                | \       \ 1
+                |  \       \
+              2 |   \ -4    V5
+                |    \     /
+                |     \   / 7
+                |      \ /
+                V2- - - V4
+                    3
+   F.Negative - weighted - Directed : there is at least a negative weight associated with edges, there is a direction between edges
+
+                       -5
+                  V1 - - -> V3
+                  ^ ^        ^
+                  |  \        \ 1
+                  |   \        \
+                  |    \ -4    V5
+                 2|     \      ^
+                  |      \    /
+                  |       \  / 7
+                  V2- - -> V4
+                       3
+
+ 4. Graph representation
+   A. Adjacency matrix:an adjacency matrix is a square matrix or 2D array. and the elements of the matrix indicates whether pairs of vertices are adjacent or not in the graph.
+
+                                             _A_ _B_ _C_ _D_ _E_
+                   A - - - B               A|_0_|_1_|_1_|_1_|_0_|
+                   |\       \              B|_1_|_0_|_0_|_0_|_1_|
+                   | \       \             C|_1_|_0_|_0_|_1_|_0_|
+                   |  \       \            D|_1_|_0_|_1_|_0_|_1_|
+                   |   \       E           E|_0_|_1_|_0_|_1_|_0_|
+                   |    \     /
+                   |     \   /
+                   |      \ /
+                   C- - -  D
+
+   B. Adjacency List: is a collection of unordered list used to represent a graph. Each list describes the set of neighbors of vertex in the graph
+                                               _ _     _ _ _    _ _ _    _ _ _
+                      A - - - B               |_A_|-->|_B_|_|->|_D_|_|->|_C_|_|
+                      |\       \              |_B_|-->|_A_|_|->|_E_|_|
+                      | \       \             |_C_|-->|_A_|_|->|_D_|_|   _ _ _
+                      |  \       \            |_D_|-->|_A_|_|->|_C_|_|->|_E_|_|
+                      |   \       E           |_E_|-->|_B_|_|->|_D_|_|
+                      |    \     /
+                      |     \   /
+                      |      \ /
+                      C- - -  D
+
+   -> When to use?
+     A. Adjacency matrix: if the graph is complete or almost complete which means all cells have 1's.
+     A. Adjacency List: if the number of edges are few then we should use Adjacency List.
