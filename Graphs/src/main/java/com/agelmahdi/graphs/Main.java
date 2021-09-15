@@ -1,7 +1,7 @@
 package com.agelmahdi.graphs;
 
-import com.agelmahdi.graphs.AdjacencyMatrix.Graph;
-import com.agelmahdi.graphs.AdjacencyMatrix.GraphNode;
+import com.agelmahdi.graphs.AdjacencyList.Graph;
+import com.agelmahdi.graphs.AdjacencyList.GraphNode;
 
 import java.util.ArrayList;
 
