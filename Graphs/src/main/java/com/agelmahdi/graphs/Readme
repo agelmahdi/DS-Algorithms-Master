@@ -139,3 +139,18 @@
  5. Graph traversal: it is a process of visiting all vertices in a given graph,
 
    A. Breadth-first search: it starts at some arbitrary node of a graph and explores the neighbor's nodes that are "at the current level", before moving to the next node.
+
+      - Time and Space complexity
+
+       -> Pesudocode
+
+          while all vertices are not explored -------->O(v) -----------------------------------------------------------
+           enqueue any starting vertices ------>O(1)                                                                   |
+           while queue is not empty -------->O(ver) ----------------------                                             |-> O(V+E)
+            p = dequeue() ------>O(1)                                     |                                            |
+            if p is unvisited ------>O(1)                                 |-> vertices + adjacent = edges = O(edges)---
+              mark as visited ------>O(1)                                 |
+              enqueue unvisited adjacent vertices of p ------>O(adj)------
+
+
+
