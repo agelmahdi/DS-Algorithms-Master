@@ -1,7 +1,7 @@
 package com.agelmahdi.graphs;
 
-import com.agelmahdi.graphs.AdjacencyList.Graph;
-import com.agelmahdi.graphs.AdjacencyList.GraphNode;
+import com.agelmahdi.graphs.AdjacencyMatrix.Graph;
+import com.agelmahdi.graphs.AdjacencyMatrix.GraphNode;
 
 import java.util.ArrayList;
 
@@ -26,5 +26,7 @@ public class Main {
         graph.addUndirectedEdge(3,4);
 
         graph.print();
+        System.out.println("\nBreadth first search");
+        graph.breadthFirstSearch();
     }
 }

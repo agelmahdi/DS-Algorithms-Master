@@ -135,3 +135,7 @@
    -> When to use?
      A. Adjacency matrix: if the graph is complete or almost complete which means all cells have 1's.
      A. Adjacency List: if the number of edges is few then we should use Adjacency List.
+
+ 5. Graph traversal: it is a process of visiting all vertices in a given graph,
+
+   A. Breadth-first search: it starts at some arbitrary node of a graph and explores the neighbor's nodes that are "at the current level", before moving to the next node.
