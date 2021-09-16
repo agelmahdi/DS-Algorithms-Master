@@ -28,5 +28,9 @@ public class Main {
         graph.print();
         System.out.println("\nBreadth first search");
         graph.breadthFirstSearch();
+        System.out.println();
+
+        System.out.println("\nDepth first search");
+        graph.depthFirstSearch();
     }
 }

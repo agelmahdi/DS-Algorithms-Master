@@ -3,6 +3,7 @@ package com.agelmahdi.graphs.AdjacencyList;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class Graph {
     private ArrayList<GraphNode> graphNodes = new ArrayList<>();
@@ -40,27 +41,50 @@ public class Graph {
 
     private void visitedBFS(GraphNode node) {
         Queue<GraphNode> queue = new LinkedList<>();
-        ((LinkedList<GraphNode>) queue).add(node);
-
+        queue.add(node);
         while (!queue.isEmpty()) {
             GraphNode current = queue.remove();
-            current.setVisited(true);
+            current.setBFSVisited(true);
             System.out.print(current.getVertex() + " ");
 
-            for (GraphNode neighbor : node.getNeighbors()) {
-                if (!neighbor.isVisited()) {
-                    ((LinkedList<GraphNode>) queue).add(neighbor);
-                    neighbor.setVisited(true);
+            for (GraphNode neighbor : current.getNeighbors()) {
+                if (!neighbor.isBFSVisited()) {
+                    queue.add(neighbor);
+                    neighbor.setBFSVisited(true);
                 }
             }
         }
-
     }
 
-    public void breadthFirstSearch(){
-        for (GraphNode node: graphNodes){
-            if (!node.isVisited()){
-                visitedBFS(node);
+    public void breadthFirstSearch() {
+        for (GraphNode graphNode : graphNodes) {
+            if (!graphNode.isBFSVisited()) {
+                visitedBFS(graphNode);
+            }
+        }
+    }
+
+    private void visitedDFS(GraphNode node) {
+        Stack<GraphNode> stack = new Stack<>();
+        stack.push(node);
+        while (!stack.isEmpty()) {
+            GraphNode current = stack.pop();
+            current.setDFSVisited(true);
+            System.out.print(current.getVertex() + " ");
+
+            for (GraphNode neighbor : current.getNeighbors()) {
+                if (!neighbor.isDFSVisited()) {
+                    stack.push(neighbor);
+                    neighbor.setDFSVisited(true);
+                }
+            }
+        }
+    }
+
+    public void depthFirstSearch() {
+        for (GraphNode graphNode : graphNodes) {
+            if (!graphNode.isDFSVisited()) {
+                visitedDFS(graphNode);
             }
         }
     }

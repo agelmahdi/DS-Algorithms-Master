@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class Graph {
     private ArrayList<GraphNode> graphNodes = new ArrayList<>();
@@ -51,18 +52,18 @@ public class Graph {
 
     }
 
-    private void visitedDFS(GraphNode node) {
+    private void visitedBFS(GraphNode node) {
         Queue<GraphNode> queue = new LinkedList<>();
         queue.add(node);
         while (!queue.isEmpty()) {
             GraphNode current = queue.remove();
-            current.setVisited(true);
+            current.setBFSVisited(true);
             System.out.print(current.getVertex() + " ");
 
             for (GraphNode neighbor : getNeighbors(current)) {
-                if (!neighbor.isVisited()) {
+                if (!neighbor.isBFSVisited()) {
                     queue.add(neighbor);
-                    neighbor.setVisited(true);
+                    neighbor.setBFSVisited(true);
                 }
             }
         }
@@ -70,7 +71,32 @@ public class Graph {
 
     public void breadthFirstSearch() {
         for (GraphNode graphNode : graphNodes) {
-            if (!graphNode.isVisited()) {
+            if (!graphNode.isBFSVisited()) {
+                visitedBFS(graphNode);
+            }
+        }
+    }
+
+    private void visitedDFS(GraphNode node) {
+        Stack<GraphNode> stack = new Stack<>();
+        stack.push(node);
+        while (!stack.isEmpty()) {
+            GraphNode current = stack.pop();
+            current.setDFSVisited(true);
+            System.out.print(current.getVertex() + " ");
+
+            for (GraphNode neighbor : getNeighbors(current)) {
+                if (!neighbor.isDFSVisited()) {
+                    stack.push(neighbor);
+                    neighbor.setDFSVisited(true);
+                }
+            }
+        }
+    }
+
+    public void depthFirstSearch() {
+        for (GraphNode graphNode : graphNodes) {
+            if (!graphNode.isDFSVisited()) {
                 visitedDFS(graphNode);
             }
         }

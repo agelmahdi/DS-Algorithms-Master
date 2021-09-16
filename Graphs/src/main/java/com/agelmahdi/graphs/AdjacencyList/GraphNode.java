@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class GraphNode {
     private String vertex;
     private int index;
-    private boolean isVisited;
+    private boolean isBFSVisited;
+    private boolean isDFSVisited;
     private ArrayList<GraphNode> neighbors = new ArrayList<>();
 
     public GraphNode(String vertex,int index){
@@ -25,11 +26,19 @@ public class GraphNode {
         return neighbors;
     }
 
-    public boolean isVisited() {
-        return isVisited;
+    public boolean isBFSVisited() {
+        return isBFSVisited;
     }
 
-    public void setVisited(boolean visited) {
-        isVisited = visited;
+    public void setBFSVisited(boolean BFSVisited) {
+        isBFSVisited = BFSVisited;
+    }
+
+    public boolean isDFSVisited() {
+        return isDFSVisited;
+    }
+
+    public void setDFSVisited(boolean DFSVisited) {
+        isDFSVisited = DFSVisited;
     }
 }

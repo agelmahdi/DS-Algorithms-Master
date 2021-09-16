@@ -138,19 +138,30 @@
 
  5. Graph traversal: it is a process of visiting all vertices in a given graph,
 
-   A. Breadth-first search: it starts at some arbitrary node of a graph and explores the neighbor's nodes that are "at the current level", before moving to the next node.
-
-      - Time and Space complexity
-
+   A. Breadth-first search: it starts at some arbitrary node of a given graph and explores the neighbor's nodes that are "at the current level", before moving to the next node.
+       -> When to use?
+        - if we know that the target vertex is close to the starting point.
        -> Pesudocode
 
           while all vertices are not explored -------->O(v) -----------------------------------------------------------
            enqueue any starting vertices ------>O(1)                                                                   |
-           while queue is not empty -------->O(ver) ----------------------                                             |-> O(V+E)
+           while queue is not empty -------->O(ver) ----------------------                                             |-> Time and space complexity = O(V+E)
             p = dequeue() ------>O(1)                                     |                                            |
             if p is unvisited ------>O(1)                                 |-> vertices + adjacent = edges = O(edges)---
               mark as visited ------>O(1)                                 |
               enqueue unvisited adjacent vertices of p ------>O(adj)------
 
 
+   B. Depth-first search: it starts at some arbitrary node of a given graph, and explore as far as possible along each edge before backtracking.
+       -> When to use?
+        - if we know that the target vertex is buried very deep.
+       -> Pesudocode
+
+          while all vertices are not explored -------->O(v) -----------------------------------------------------------
+           push any starting vertices ------>O(1)                                                                      |
+           while stack is not empty -------->O(ver) ----------------------                                             |-> Time and space complexity = O(V+E)
+            p = pop() ------>O(1)                                         |                                            |
+            if p is unvisited ------>O(1)                                 |-> vertices + adjacent = edges = O(edges)---
+              mark as visited ------>O(1)                                 |
+                push unvisited adjacent vertices of p ------>O(adj)---------
 
