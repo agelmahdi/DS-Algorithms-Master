@@ -101,4 +101,34 @@ public class Graph {
             }
         }
     }
+
+    // Topological sort
+    public void addDirectedEdge(int i, int j) {
+        adjacentMatrix[i][j] = 1;
+    }
+
+    private void topologicalVisited(GraphNode node, Stack<GraphNode> stack) {
+        for (GraphNode neighbor : getNeighbors(node)) {
+            if (!neighbor.isTopoVisited()) {
+                topologicalVisited(neighbor, stack);
+            }
+        }
+        node.setTopoVisited(true);
+        stack.push(node);
+
+    }
+
+    public void topologicalSort() {
+        Stack<GraphNode> stack = new Stack<>();
+        for (GraphNode node : graphNodes) {
+            if (!node.isTopoVisited()) {
+                topologicalVisited(node, stack);
+            }
+        }
+
+        while (!stack.isEmpty()) {
+            System.out.print(stack.pop().getVertex() + " ");
+        }
+
+    }
 }

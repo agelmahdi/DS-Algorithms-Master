@@ -5,6 +5,7 @@ public class GraphNode {
     private int index;
     private boolean isBFSVisited;
     private boolean isDFSVisited;
+    private boolean isTopoVisited;
 
     public GraphNode(String vertex,int index){
         this.index = index;
@@ -33,5 +34,13 @@ public class GraphNode {
 
     public void setDFSVisited(boolean DFSVisited) {
         isDFSVisited = DFSVisited;
+    }
+
+    public boolean isTopoVisited() {
+        return isTopoVisited;
+    }
+
+    public void setTopoVisited(boolean topoVisited) {
+        isTopoVisited = topoVisited;
     }
 }
