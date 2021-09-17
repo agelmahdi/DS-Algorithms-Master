@@ -165,3 +165,17 @@
               mark as visited ------>O(1)                                 |
                 push unvisited adjacent vertices of p ------>O(adj)---------
 
+
+ 6. Topological sort: sorts a given action in such a way that if there is a dependency of one action on another, then the dependant action always comes later than its parent action.
+       -> Pesudocode
+
+          topoSort(Node,Stack)____________
+           for all vertices               |
+             if vertex unvisited          |-> O(V) ---------
+                topoVisited(vertex)_______|                 |
+                                                            |
+          topoVisited(node, stack)---------                 | -> Time and space complexity = O(V+E)
+           for each nodes                  |                |
+             if unvisited                  |-> O(E)---------
+               topoVisited(neighbor)       |
+           stack.push(neighbor)------------

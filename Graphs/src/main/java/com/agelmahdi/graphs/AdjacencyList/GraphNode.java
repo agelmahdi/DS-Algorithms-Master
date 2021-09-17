@@ -7,11 +7,13 @@ public class GraphNode {
     private int index;
     private boolean isBFSVisited;
     private boolean isDFSVisited;
+    private boolean isTopoVisited;
+
     private ArrayList<GraphNode> neighbors = new ArrayList<>();
 
-    public GraphNode(String vertex,int index){
+    public GraphNode(String vertex, int index) {
         this.index = index;
-        this.vertex =vertex;
+        this.vertex = vertex;
     }
 
     public String getVertex() {
@@ -40,5 +42,13 @@ public class GraphNode {
 
     public void setDFSVisited(boolean DFSVisited) {
         isDFSVisited = DFSVisited;
+    }
+
+    public boolean isTopoVisited() {
+        return isTopoVisited;
+    }
+
+    public void setTopoVisited(boolean topoVisited) {
+        isTopoVisited = topoVisited;
     }
 }
