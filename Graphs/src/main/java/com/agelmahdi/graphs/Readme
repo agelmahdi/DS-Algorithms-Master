@@ -179,3 +179,31 @@
              if unvisited                  |-> O(E)---------
                topoVisited(neighbor)       |
            stack.push(neighbor)------------
+
+ 7. Single source shortest path problem "SSSPP": it is about finding the path between a given vertex "source" to all other vertices in a graph such that
+                                           the total distance between them "source and destination" is minimum.
+
+       -> solve this problem using three types of algorithms
+
+         A. Breadth first search algorithm:
+
+             -> When to use?
+              -Unweighted - undirected
+              -Unweighted - directed
+
+             -> Why DFS not a working solution?
+              -DFS has the tendency to go "as far as possible" from source, hence it can never find the shortest path
+
+             -> Pesudocode
+
+                   enqueue any starting vertices ------>O(1) ----------------------
+                    while queue is not empty -------->O(ver)                       |
+                     current = dequeue() ------>O(1)                               |-> Time complexity = O(E)
+                     if current is unvisited ------>O(1)                           |
+                       mark as visited ------>O(1)                                 |-> Space complexity = O(V)
+                       update parent of adjacent vertices to current               |
+                       enqueue unvisited adjacent vertices of current->O(adj)------
+
+
+         B. Dijkstra's algorithm
+         C. Bellman Ford algorithm

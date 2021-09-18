@@ -6,10 +6,13 @@ public class GraphNode {
     private boolean isBFSVisited;
     private boolean isDFSVisited;
     private boolean isTopoVisited;
+    private boolean isSSSPVisited;
 
-    public GraphNode(String vertex,int index){
+    private GraphNode parent;
+
+    public GraphNode(String vertex, int index) {
         this.index = index;
-        this.vertex =vertex;
+        this.vertex = vertex;
     }
 
     public String getVertex() {
@@ -42,5 +45,21 @@ public class GraphNode {
 
     public void setTopoVisited(boolean topoVisited) {
         isTopoVisited = topoVisited;
+    }
+
+    public GraphNode getParent() {
+        return parent;
+    }
+
+    public boolean isSSSPVisited() {
+        return isSSSPVisited;
+    }
+
+    public void setSSSPVisited(boolean SSSPVisited) {
+        isSSSPVisited = SSSPVisited;
+    }
+
+    public void setParent(GraphNode parent) {
+        this.parent = parent;
     }
 }
