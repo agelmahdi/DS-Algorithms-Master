@@ -205,5 +205,11 @@
                        enqueue unvisited adjacent vertices of current->O(adj)------
 
 
-         B. Dijkstra's algorithm
+         B. Dijkstra's algorithm:
+             -> When to use?
+               -Positive - weighted - directed
+
+             -> When not working?
+               - with negative Cycle: a cycle is a path of edges or vertices wherein a vertex is reachable from itself, and the total weight of the cycle is a negative number.
+
          C. Bellman Ford algorithm
