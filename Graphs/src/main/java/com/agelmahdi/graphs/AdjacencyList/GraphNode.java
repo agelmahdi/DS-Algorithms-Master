@@ -8,6 +8,8 @@ public class GraphNode {
     private boolean isBFSVisited;
     private boolean isDFSVisited;
     private boolean isTopoVisited;
+    private boolean isSSSPVisited;
+    private GraphNode parent;
 
     private ArrayList<GraphNode> neighbors = new ArrayList<>();
 
@@ -46,6 +48,22 @@ public class GraphNode {
 
     public boolean isTopoVisited() {
         return isTopoVisited;
+    }
+
+    public GraphNode getParent() {
+        return parent;
+    }
+
+    public void setParent(GraphNode parent) {
+        this.parent = parent;
+    }
+
+    public boolean isSSSPVisited() {
+        return isSSSPVisited;
+    }
+
+    public void setSSSPVisited(boolean SSSPVisited) {
+        isSSSPVisited = SSSPVisited;
     }
 
     public void setTopoVisited(boolean topoVisited) {

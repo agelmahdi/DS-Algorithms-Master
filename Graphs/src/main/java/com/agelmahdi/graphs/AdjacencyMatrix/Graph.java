@@ -131,4 +131,37 @@ public class Graph {
         }
 
     }
+
+    // Single source shortest path problem
+
+    private void pathPrint(GraphNode graphNode) {
+        if (graphNode.getParent() != null) {
+            pathPrint(graphNode.getParent());
+        }
+        System.out.print(graphNode.getVertex() + " ");
+    }
+
+    // Breadth first search solution
+    public void bfsForSSSPP(GraphNode graphNode) {
+        Queue<GraphNode> queue = new LinkedList<>();
+        ((LinkedList<GraphNode>) queue).add(graphNode);
+        while (!queue.isEmpty()) {
+
+            GraphNode current = queue.remove();
+            current.setSSSPVisited(true);
+
+            System.out.print("Path for vertex " + current.getVertex() + ": ");
+            pathPrint(current);
+            System.out.println();
+
+            for (GraphNode neighbor : getNeighbors(current)) {
+                if (!neighbor.isSSSPVisited()) {
+                    ((LinkedList<GraphNode>) queue).add(neighbor);
+                    neighbor.setSSSPVisited(true);
+                    neighbor.setParent(current);
+                }
+            }
+        }
+
+    }
 }
