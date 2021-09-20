@@ -187,29 +187,23 @@
 
          A. Breadth first search algorithm:
 
-             -> When to use?
-              -Unweighted - undirected
-              -Unweighted - directed
-
              -> Why DFS not a working solution?
               -DFS has the tendency to go "as far as possible" from source, hence it can never find the shortest path
 
-             -> Pesudocode
-
-                   enqueue any starting vertices ------>O(1) ----------------------
-                    while queue is not empty -------->O(ver)                       |
-                     current = dequeue() ------>O(1)                               |-> Time complexity = O(E)
-                     if current is unvisited ------>O(1)                           |
-                       mark as visited ------>O(1)                                 |-> Space complexity = O(V)
-                       update parent of adjacent vertices to current               |
-                       enqueue unvisited adjacent vertices of current->O(adj)------
-
-
          B. Dijkstra's algorithm:
-             -> When to use?
-               -Positive - weighted - directed
 
              -> When not working?
                - with negative Cycle: a cycle is a path of edges or vertices wherein a vertex is reachable from itself, and the total weight of the cycle is a negative number.
 
-         C. Bellman Ford algorithm
+         C. Bellman Ford algorithm: if there is a negative cycle it catches it and report its existence
+
+ 8.                                  BFS                        |               Dijkstra                   |                    Bellman ford
+
+     A. Time complexity  |           O(V~2)                     |                 O(V~2)                    |                       O(VE)
+     B. Space complexity |           O(E)                       |                 O(V)                      |                       O(V)
+     C. Implementation   |           Easy                       |               Moderate                    |                     Moderate
+     D. Limitation       |    Not working for weighted graphs   |       Not working negative cycle          |                       N/A
+     E. Unweighted graph | Good as time and easy implementation |    Not used as implementation not easy    |            Not used as bad time complexity
+     F. weighted graph   |          Not supported               |   Use as time is better than bellman      |            Not used as bad time complexity
+     G. Negative cycle:  |          Not supported               |               Not supported               |                     supported
+

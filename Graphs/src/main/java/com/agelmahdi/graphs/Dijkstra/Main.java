@@ -24,6 +24,6 @@ public class Main {
         weightedGraph.addWeightedNode(4,6,9);
         weightedGraph.addWeightedNode(5,6,7);
 
-        weightedGraph.dijkstra(weightedNodes.get(0));
+        weightedGraph.bellmanFord(weightedNodes.get(0));
     }
 }

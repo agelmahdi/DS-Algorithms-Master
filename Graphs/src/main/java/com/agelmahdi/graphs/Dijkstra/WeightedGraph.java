@@ -59,4 +59,41 @@ public class WeightedGraph {
 
     }
 
+
+    public void bellmanFord(WeightedNode sourceNode) {
+        sourceNode.setDistance(0);
+        for (int i=0; i<weightedNodes.size(); i++) {
+            for (WeightedNode currentNode : weightedNodes) {
+                for (WeightedNode neighbor : currentNode.getNeighbors()) {
+                    if(neighbor.getDistance() > currentNode.getDistance() + currentNode.getWeightMap().get(neighbor)) {
+                        neighbor.setDistance(currentNode.getDistance() + currentNode.getWeightMap().get(neighbor));
+                        neighbor.setParent(currentNode);
+                    }
+                }
+            }
+        }
+        System.out.println("Checking for Negative Cycle..");
+        for (WeightedNode currentNode : weightedNodes) {
+            for (WeightedNode neighbor : currentNode.getNeighbors() ) {
+                if(neighbor.getDistance() > currentNode.getDistance() + currentNode.getWeightMap().get(neighbor)) {
+                    System.out.println("Negative cycle found: \n");
+                    System.out.println("Vertex name: " + neighbor.getVertex());
+                    System.out.println("Old cost: " + neighbor.getDistance());
+                    int newDistance = currentNode.getDistance() + currentNode.getWeightMap().get(neighbor);
+                    System.out.println("new cost: " + newDistance);
+                    return;
+                }
+            }
+        }
+        System.out.println("Negative Cycle not found");
+
+        for (WeightedNode nodeToCheck : weightedNodes) {
+            System.out.print("Node " +nodeToCheck+", distance: "+nodeToCheck.getDistance()+", Path: ");
+            pathPrint(nodeToCheck);
+            System.out.println();
+        }
+
+
+    }
+
 }
