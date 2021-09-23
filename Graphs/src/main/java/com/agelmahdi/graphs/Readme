@@ -197,13 +197,48 @@
 
          C. Bellman Ford algorithm: if there is a negative cycle it catches it and report its existence
 
- 8.                                  BFS                        |               Dijkstra                   |                    Bellman ford
+                                     BFS                        |               Dijkstra                   |                    Bellman ford
 
      A. Time complexity  |           O(V~2)                     |                 O(V~2)                    |                       O(VE)
      B. Space complexity |           O(E)                       |                 O(V)                      |                       O(V)
      C. Implementation   |           Easy                       |               Moderate                    |                     Moderate
      D. Limitation       |    Not working for weighted graphs   |       Not working negative cycle          |                       N/A
-     E. Unweighted graph | Good as time and easy implementation |    Not used as implementation not easy    |            Not used as bad time complexity
+     E. Unweighted graph | Good as time and easy implementation |   Not used as implementation not easy     |            Not used as bad time complexity
      F. weighted graph   |          Not supported               |   Use as time is better than bellman      |            Not used as bad time complexity
      G. Negative cycle:  |          Not supported               |               Not supported               |                     supported
+
+
+ 8. All pairs shortest path problem: it is about finding a path between every vertex to all other vertices in a graph such that the total distance between them (source and destination) is minimum.
+
+         A. Floyed warshall algorithm:
+
+             -> formula
+                 if D[source][destination] > D[source][viaX] + D[viaX][destination]
+                    D[source][destination] = D[source][viaX] + D[viaX][destination]
+
+             -> why to use?
+                - The solution takes into account all those steps:
+              A. The vertex is not reachable
+              B. Two vertices are directly connected
+                 - This is the best solution
+                 - It can be improved via other vertex
+              C. Two vertices are connected via other vertex
+
+             -> not working negative Cycle
+              A. to go through cycle we need to go via negative cycle participating vertex at least twice
+              B. FW never runs loops twice via same vertex
+              C. Hence FW can never detect a negative cycle
+
+
+                                        BFS                        |               Dijkstra                   |                    Bellman ford               |        Floyd warshall
+
+        A. Time complexity  |           O(V~3)                     |                 O(V~3)                    |                       O(VE~2)                |          O(V~3)
+        B. Space complexity |           O(EV)                      |                 O(EV)                     |                       O(V~2)                 |          O(V~2)
+        C. Implementation   |           Easy                       |               Moderate                    |                     Moderate                 |         Moderate
+        D. Limitation       |    Not working for weighted graphs   |     Not working for negative cycle        |                       N/A                    | Not working for negative cycle
+        E. Unweighted graph | Good as time and easy implementation |   Not use as priority queue slow it       |            Not used as bad time complexity   |         Can be used
+        F. weighted graph   |          Not supported               |                Can be used                |            Not used as bad time complexity   | Can be preferred as easy implementation
+        G. Negative cycle:  |          Not supported               |               Not supported               |                     supported                |          Not supported
+
+
 
