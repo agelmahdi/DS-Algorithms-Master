@@ -1,4 +1,4 @@
-package com.agelmahdi.graphs.Dijkstra;
+package com.agelmahdi.graphs.GraphAlgorithms;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
@@ -50,32 +50,22 @@ public class WeightedGraph {
 
     }
 
-    private void pathPrint(WeightedNode node) {
-        if (node.getParent() != null) {
-            pathPrint(node.getParent());
-        }
-
-        System.out.print(node.getVertex() + " ");
-
-    }
-
 
     public void bellmanFord(WeightedNode sourceNode) {
         sourceNode.setDistance(0);
-        for (int i=0; i<weightedNodes.size(); i++) {
-            for (WeightedNode currentNode : weightedNodes) {
-                for (WeightedNode neighbor : currentNode.getNeighbors()) {
-                    if(neighbor.getDistance() > currentNode.getDistance() + currentNode.getWeightMap().get(neighbor)) {
-                        neighbor.setDistance(currentNode.getDistance() + currentNode.getWeightMap().get(neighbor));
-                        neighbor.setParent(currentNode);
-                    }
+        for (WeightedNode currentNode : weightedNodes) {
+            for (WeightedNode neighbor : currentNode.getNeighbors()) {
+                if (neighbor.getDistance() > currentNode.getDistance() + currentNode.getWeightMap().get(neighbor)) {
+                    neighbor.setDistance(currentNode.getDistance() + currentNode.getWeightMap().get(neighbor));
+                    neighbor.setParent(currentNode);
                 }
             }
         }
+
         System.out.println("Checking for Negative Cycle..");
         for (WeightedNode currentNode : weightedNodes) {
-            for (WeightedNode neighbor : currentNode.getNeighbors() ) {
-                if(neighbor.getDistance() > currentNode.getDistance() + currentNode.getWeightMap().get(neighbor)) {
+            for (WeightedNode neighbor : currentNode.getNeighbors()) {
+                if (neighbor.getDistance() > currentNode.getDistance() + currentNode.getWeightMap().get(neighbor)) {
                     System.out.println("Negative cycle found: \n");
                     System.out.println("Vertex name: " + neighbor.getVertex());
                     System.out.println("Old cost: " + neighbor.getDistance());
@@ -88,11 +78,61 @@ public class WeightedGraph {
         System.out.println("Negative Cycle not found");
 
         for (WeightedNode nodeToCheck : weightedNodes) {
-            System.out.print("Node " +nodeToCheck+", distance: "+nodeToCheck.getDistance()+", Path: ");
+            System.out.print("Node " + nodeToCheck + ", distance: " + nodeToCheck.getDistance() + ", Path: ");
             pathPrint(nodeToCheck);
             System.out.println();
         }
 
+
+    }
+
+    public void floydWarshall() {
+        int size = weightedNodes.size();
+        int matrix[][] = new int[size][size];
+
+
+        for (int i = 0; i < size; i++) {
+            WeightedNode first = weightedNodes.get(i);
+            for (int j = 0; j < size; j++) {
+                WeightedNode second = weightedNodes.get(j);
+
+                if (i == j) { // this is mean same vertex
+                    matrix[i][j] = 0;
+                } else if (first.getWeightMap().containsKey(second)) { // this means has a direct connection
+                    matrix[i][j] = first.getWeightMap().get(second);
+                } else {
+                    matrix[i][j] = Integer.MAX_VALUE/10; // this means has not a direct connection // divided by 10 to avoid math overflow
+                }
+            }
+        }
+
+        for (int viaX = 0; viaX < size; viaX++) {
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
+                    if (matrix[i][j] > matrix[i][viaX] + matrix[viaX][j]) {
+                        matrix[i][j] = matrix[i][viaX] + matrix[viaX][j];
+                    }
+                }
+            }
+        }
+
+        for (int i = 0; i < size; i++) {
+            System.out.print("Distances for node " + weightedNodes.get(i) + ": ");
+            for (int j = 0; j < size; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+
+
+    private void pathPrint(WeightedNode node) {
+        if (node.getParent() != null) {
+            pathPrint(node.getParent());
+        }
+
+        System.out.print(node.getVertex() + " ");
 
     }
 

@@ -1,4 +1,4 @@
-package com.agelmahdi.graphs.Dijkstra;
+package com.agelmahdi.graphs.GraphAlgorithms;
 
 import java.util.ArrayList;
 import java.util.HashMap;
