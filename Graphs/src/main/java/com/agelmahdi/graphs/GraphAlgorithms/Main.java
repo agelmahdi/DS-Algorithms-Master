@@ -24,6 +24,29 @@ public class Main {
 //        weightedGraph.addWeightedNode(4,6,9);
 //        weightedGraph.addWeightedNode(5,6,7);
 
-        weightedGraph.floydWarshall();
+       // weightedGraph.floydWarshall();
+
+
+        ArrayList<WeightedNode> nodes = new ArrayList<>();
+
+        nodes.add(new WeightedNode("A",0));
+        nodes.add(new WeightedNode("B",1));
+        nodes.add(new WeightedNode("C",2));
+        nodes.add(new WeightedNode("D",3));
+        nodes.add(new WeightedNode("E",4));
+
+        Kruskal kruskal = new Kruskal(nodes);
+        kruskal.addWeightedUndirectedEdge(0,1,5);
+        kruskal.addWeightedUndirectedEdge(0,2,13);
+        kruskal.addWeightedUndirectedEdge(0,4,15);
+        kruskal.addWeightedUndirectedEdge(1,2,10);
+        kruskal.addWeightedUndirectedEdge(1,3,8);
+        kruskal.addWeightedUndirectedEdge(2,3,6);
+        kruskal.addWeightedUndirectedEdge(2,4,20);
+
+        kruskal.kruskal();
+
+
+
     }
 }
