@@ -263,6 +263,19 @@
                        1. Add increasing cost edges at each step
                        2. Avoid any cycle at each step
 
+                  ->Properties
+                    - Concentrates on Edges
+                    - Finalize edge in each iteration
+
+                  -> Applications
+                    - landing cables
+                    - Tv network
+                    - Tour operation
+                    - LAN network
+                    - A network of pipes for drinking water or natural gas
+                    - An electric grid
+                    - Single link cluster
+
                   -> Pesudocode
 
                    Kruskal(G)
@@ -272,6 +285,28 @@
                    for each edge (u,v) ----------------------------------> O(e)        | Space Complexity = O(E+V)
                      if findSet(u) != findSet(v)
                        union(u,v)----------------------------------------> O(v)
-                       cost = cost + edge(u,v  )
+                       cost = cost + edge(u,v)
+
+                B. Prims Algorithm:
+
+                   - it is a Greedy algorithm
+                   - it finds a minimum spanning tree for weighted undirected graphs in following steps:
+
+                       1. Take any vertex a s a source set its weight to 0 and all  other vertices weight to infinity
+                       2. for every adjacent vertices if the current weight is more than current edge then we set it to current edge
+                       3. then make mark current as visited
+                       4. repeat these steps for all vertices in increasing order of weight
+
+                  ->Properties
+                    - Concentrates on Vertices
+                    - Finalize vertex in each iteration
+
+                  -> Applications
+                    - Network for roads and rail tracks connecting all cities
+                    - Irrigation channels and placing microwaves towers
+                    - Designing a fiber-optic grid or ICs
+                    - Traveling salesman problem
+                    - Cluster analysis
+                    - Pathfinding algorithm us in AI
 
 

@@ -35,16 +35,16 @@ public class Main {
         nodes.add(new WeightedNode("D",3));
         nodes.add(new WeightedNode("E",4));
 
-        Kruskal kruskal = new Kruskal(nodes);
-        kruskal.addWeightedUndirectedEdge(0,1,5);
-        kruskal.addWeightedUndirectedEdge(0,2,13);
-        kruskal.addWeightedUndirectedEdge(0,4,15);
-        kruskal.addWeightedUndirectedEdge(1,2,10);
-        kruskal.addWeightedUndirectedEdge(1,3,8);
-        kruskal.addWeightedUndirectedEdge(2,3,6);
-        kruskal.addWeightedUndirectedEdge(2,4,20);
+        Prims prims = new Prims(nodes);
+        prims.addWeightedUndirectedEdge(0,1,5);
+        prims.addWeightedUndirectedEdge(0,2,13);
+        prims.addWeightedUndirectedEdge(0,4,15);
+        prims.addWeightedUndirectedEdge(1,2,10);
+        prims.addWeightedUndirectedEdge(1,3,8);
+        prims.addWeightedUndirectedEdge(2,3,6);
+        prims.addWeightedUndirectedEdge(2,4,20);
 
-        kruskal.kruskal();
+        prims.prims(nodes.get(0));
 
 
 
