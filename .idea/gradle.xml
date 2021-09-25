@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="Embedded JDK" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AVLTree" />
+            <option value="$PROJECT_DIR$/Arrays" />
+            <option value="$PROJECT_DIR$/BigO" />
+            <option value="$PROJECT_DIR$/BinaryHeap" />
+            <option value="$PROJECT_DIR$/BinarySearchTree" />
+            <option value="$PROJECT_DIR$/BinaryTree" />
+            <option value="$PROJECT_DIR$/CircularDoublyLinkedList" />
+            <option value="$PROJECT_DIR$/CircularLinkedList" />
+            <option value="$PROJECT_DIR$/DoublyLinkedList" />
+            <option value="$PROJECT_DIR$/Graphs" />
+            <option value="$PROJECT_DIR$/Hashing" />
+            <option value="$PROJECT_DIR$/LinkedList" />
+            <option value="$PROJECT_DIR$/LinkedListProblems" />
+            <option value="$PROJECT_DIR$/QueueArray" />
+            <option value="$PROJECT_DIR$/Recursion" />
+            <option value="$PROJECT_DIR$/SearchingAlgorithms" />
+            <option value="$PROJECT_DIR$/SimpleTree" />
+            <option value="$PROJECT_DIR$/SortingAlgorithms" />
+            <option value="$PROJECT_DIR$/StackArray" />
+            <option value="$PROJECT_DIR$/StackLinkedList" />
+            <option value="$PROJECT_DIR$/StackQueueQuestions" />
+            <option value="$PROJECT_DIR$/Trie" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
