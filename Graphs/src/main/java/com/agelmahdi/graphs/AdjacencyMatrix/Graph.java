@@ -107,6 +107,7 @@ public class Graph {
         adjacentMatrix[i][j] = 1;
     }
 
+
     private void topologicalVisited(GraphNode node, Stack<GraphNode> stack) {
         for (GraphNode neighbor : getNeighbors(node)) {
             if (!neighbor.isTopoVisited()) {
@@ -163,5 +164,38 @@ public class Graph {
             }
         }
 
+    }
+
+    public void findDirectRoute(GraphNode source, GraphNode destination) {
+        Queue<GraphNode> queue = new LinkedList<>();
+        queue.add(source);
+        GraphNode current = null;
+        while (!queue.isEmpty()) {
+            current = queue.remove();
+            current.setSSSPVisited(true);
+            if (current == destination) {
+                System.out.print("Route found: ");
+                pathPrint(current);
+                System.out.println();
+                break;
+            }
+
+            for (GraphNode neighbor : getNeighbors(current)) {
+                if (!neighbor.isSSSPVisited()) {
+                    queue.add(neighbor);
+                    neighbor.setSSSPVisited(true);
+                    neighbor.setParent(current);
+                }
+            }
+        }
+        if (current != null && current != destination) {
+            System.out.println("route not found");
+        }
+
+    }
+
+
+    public boolean isDirectNodeFound(int i, int j) {
+        return adjacentMatrix[i][j] == 1;
     }
 }
