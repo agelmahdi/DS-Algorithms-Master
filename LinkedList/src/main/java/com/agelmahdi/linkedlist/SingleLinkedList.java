@@ -1,6 +1,5 @@
 package com.agelmahdi.linkedlist;
 
-import org.omg.CORBA.NO_IMPLEMENT;
 
 public class SingleLinkedList {
     public Node head = null;

@@ -1,0 +1,33 @@
+1. What is Greedy Algorithms?
+  A. it is an algorithmic paradigm that build the solution piece by piece
+  B. in each step it chooses the piece that offers most obvious and immediate benefit
+  C. it fits perfectly for those solutions  in which local optimal solution lead to global solution
+
+2. Problems solved by Greedy Algorithm?
+  - Insertion sort:
+    A. Divide an array into two parts which are sorted and unsorted.
+    B. from the unsorted array we take the first element and put it in its perfect location in the sorted array.
+
+  - Selection sort:
+    A. Divide an array into two parts which are sorted and unsorted.
+    B. at each iteration we are finding the minimum element from unsorted array and put it in its location in the sorted array.
+
+  - Topological Sort: sorts a given action in such a way that if there is a dependency of one action on another,
+    then the dependant action always comes later than its parent action.
+
+  - Prims Algorithm: it finds a minimum spanning tree for weighted undirected graphs.
+    A. Take any vertex a s a source set its weight to 0 and all  other vertices weight to infinity.
+    B. for every adjacent vertices if the current weight is more than current edge then we set it to current edge.
+    C. then make mark current as visited.
+    D. repeat these steps for all vertices in increasing order of weight.
+
+  - Kruskal Algorithm: it finds a minimum spanning tree for weighted undirected graphs.
+    A. Add increasing cost edges at each step
+    B. Avoid any cycle at each step
+
+  - Activity selection problem: Given N number of activities with their start and end times.
+   We need to select the maximum number of activities that can performed by a single person,
+   assuming that a person can only work on a single activity at a time.
+
+  - Coin change problem
+  - Fractional knapsack problem

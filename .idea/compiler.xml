@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="DataStructureandAlgorithms.app" target="11" />
+      <module name="DataStructureandAlgorithms.app.greedyalgorithms" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

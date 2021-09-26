@@ -1,0 +1,1294 @@
+Index: .idea/runConfigurations.xml
+===================================================================
+diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+deleted file mode 100644
+--- a/.idea/runConfigurations.xml	(revision 9f62392f2b04ab86aa8cbfbb4ece3ce6a61bda7d)
++++ /dev/null	(revision 9f62392f2b04ab86aa8cbfbb4ece3ce6a61bda7d)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RunConfigurationProducerService">
+-    <option name="ignoredProducers">
+-      <set>
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />
+-      </set>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>include ':app', ':Recursion', ':BigO', ':Arrays', ':LinkedList', ':CircularLinkedList', ':DoublyLinkedList', ':CircularDoublyLinkedList', ':LinkedListProblems', ':StackArray', ':StackLinkedList', ':QueueArray',':StackQueueQuestions', ':SimpleTree', ':BinaryTree', ':BinarySearchTree', ':AVLTree', ':BinaryHeap', ':Trie', ':Hashing', ':SortingAlgorithms', ':SearchingAlgorithms'\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/settings.gradle b/settings.gradle
+--- a/settings.gradle	(revision 9f62392f2b04ab86aa8cbfbb4ece3ce6a61bda7d)
++++ b/settings.gradle	(date 1632682285370)
+@@ -1,1 +1,2 @@
+-include ':app', ':Recursion', ':BigO', ':Arrays', ':LinkedList', ':CircularLinkedList', ':DoublyLinkedList', ':CircularDoublyLinkedList', ':LinkedListProblems', ':StackArray', ':StackLinkedList', ':QueueArray',':StackQueueQuestions', ':SimpleTree', ':BinaryTree', ':BinarySearchTree', ':AVLTree', ':BinaryHeap', ':Trie', ':Hashing', ':SortingAlgorithms', ':SearchingAlgorithms'
++include ':app', ':Recursion', ':BigO', ':Arrays', ':LinkedList', ':CircularLinkedList', ':DoublyLinkedList', ':CircularDoublyLinkedList', ':LinkedListProblems', ':StackArray', ':StackLinkedList', ':QueueArray',':StackQueueQuestions', ':SimpleTree', ':BinaryTree', ':BinarySearchTree', ':AVLTree', ':BinaryHeap', ':Trie', ':Hashing', ':SortingAlgorithms', ':SearchingAlgorithms',':greedyalgorithms'
++include ':greedy-algorithms'
+Index: app/greedyalgorithms/src/main/res/drawable-v24/ic_launcher_foreground.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/src/main/res/drawable-v24/ic_launcher_foreground.xml b/app/greedyalgorithms/src/main/res/drawable-v24/ic_launcher_foreground.xml
+new file mode 100644
+--- /dev/null	(date 1632666368062)
++++ b/app/greedyalgorithms/src/main/res/drawable-v24/ic_launcher_foreground.xml	(date 1632666368062)
+@@ -0,0 +1,30 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
++        <aapt:attr name="android:fillColor">
++            <gradient
++                android:endX="85.84757"
++                android:endY="92.4963"
++                android:startX="42.9492"
++                android:startY="49.59793"
++                android:type="linear">
++                <item
++                    android:color="#44000000"
++                    android:offset="0.0" />
++                <item
++                    android:color="#00000000"
++                    android:offset="1.0" />
++            </gradient>
++        </aapt:attr>
++    </path>
++    <path
++        android:fillColor="#FFFFFF"
++        android:fillType="nonZero"
++        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
++        android:strokeWidth="1"
++        android:strokeColor="#00000000" />
++</vector>
+\ No newline at end of file
+Index: CircularDoublyLinkedList/src/main/java/com/agelmahdi/circulardoublylinkedlist/CircularDoublySingleList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.agelmahdi.circulardoublylinkedlist;\n\nimport org.omg.CORBA.NO_IMPLEMENT;\n\npublic class CircularDoublySingleList {\n    Node head= null;\n    Node tail =null;\n    int size=0;\n\n    public Node createCDLL(int value) {\n\n        Node node = new Node();\n        node.value = value;\n\n        head = node;\n        tail = node;\n\n        node.next = node;\n        node.previous = node;\n\n        size = 1;\n\n        return head;\n\n\n\n    }\n    public void insertInCDLL(int value, int location) {\n\n        Node node = new Node();\n        node.value = value;\n        if (head == null){\n            createCDLL(value);\n            return;\n        }\n        else if (location ==0){\n            node.previous = tail;\n            node.next =head;\n\n            head.previous =node;\n\n            head =node;\n            tail.next =node;\n\n        }else if (location >= size){\n            node.next=head;\n            node.previous=tail;\n\n            head.previous=node;\n\n            tail.next=node;\n            tail = node;\n        }else {\n            Node before = head;\n            for (int i =0; i<location -1;i++){\n                before = before.next;\n            }\n            Node nextNode = before.next;\n            before.next = node;\n            node.previous = before;\n            node.next = nextNode;\n            nextNode.previous = node;\n           // node.next.previous = node;\n\n        }\n\n        size++;\n\n    }\n\n    public void deleteItemFromCDLL(int location) {\n        if (head == null){\n            return;\n        }\n        else if (location ==0){\n            head = head.next;\n            head.previous = tail;\n            tail.next =head;\n           // tail =head;\n\n            size--;\n            if (size==0){\n                head = tail= head.next=head.previous=null;\n            }\n\n        }\n        else if (location >= size){\n\n            Node beforeLast = tail.previous;\n\n            if (beforeLast == head){\n                head = tail= head.next=head.previous=null;\n                size--;\n                return;\n            }\n\n            //tail=tail.previous;\n            beforeLast.next = head;\n            tail.next = head;\n           // head.previous =tail;\n\n            size--;\n        }\n        else {\n            Node before = head;\n            for (int i=0; i<location -1; i++){\n                before = before.next;\n            }\n\n            Node nextNode = before.next.next;\n            before.next = nextNode;\n            nextNode.previous = before;\n            size--;\n\n        }\n    }\n\n    public void traverseCDLL() {\n\n        if (head == null){\n            System.out.println(\"Head not found\");\n        }\n        else {\n            Node temp = head;\n            for (int i =0; i<size; i++){\n                System.out.print(temp.value);\n                if (i != size -1){\n                    System.out.print(\" -> \");\n                }\n                temp = temp.next;\n            }\n        }\n        System.out.println(\"\\n\");\n        //Time Complexity O(n)\n        //Space Complexity O(1)\n    }\n\n\n\n\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/CircularDoublyLinkedList/src/main/java/com/agelmahdi/circulardoublylinkedlist/CircularDoublySingleList.java b/CircularDoublyLinkedList/src/main/java/com/agelmahdi/circulardoublylinkedlist/CircularDoublySingleList.java
+--- a/CircularDoublyLinkedList/src/main/java/com/agelmahdi/circulardoublylinkedlist/CircularDoublySingleList.java	(revision 9f62392f2b04ab86aa8cbfbb4ece3ce6a61bda7d)
++++ b/CircularDoublyLinkedList/src/main/java/com/agelmahdi/circulardoublylinkedlist/CircularDoublySingleList.java	(date 1632682583386)
+@@ -1,6 +1,5 @@
+ package com.agelmahdi.circulardoublylinkedlist;
+ 
+-import org.omg.CORBA.NO_IMPLEMENT;
+ 
+ public class CircularDoublySingleList {
+     Node head= null;
+Index: app/greedyalgorithms/src/main/res/drawable/ic_launcher_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/src/main/res/drawable/ic_launcher_background.xml b/app/greedyalgorithms/src/main/res/drawable/ic_launcher_background.xml
+new file mode 100644
+--- /dev/null	(date 1632666368042)
++++ b/app/greedyalgorithms/src/main/res/drawable/ic_launcher_background.xml	(date 1632666368042)
+@@ -0,0 +1,170 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path
++        android:fillColor="#3DDC84"
++        android:pathData="M0,0h108v108h-108z" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M9,0L9,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,0L19,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,0L29,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,0L39,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,0L49,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,0L59,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,0L69,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,0L79,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M89,0L89,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M99,0L99,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,9L108,9"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,19L108,19"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,29L108,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,39L108,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,49L108,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,59L108,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,69L108,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,79L108,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,89L108,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,99L108,99"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,29L89,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,39L89,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,49L89,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,59L89,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,69L89,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,79L89,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,19L29,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,19L39,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,19L49,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,19L59,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,19L69,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,19L79,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++</vector>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_7\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 9f62392f2b04ab86aa8cbfbb4ece3ce6a61bda7d)
++++ b/.idea/misc.xml	(date 1632666387050)
+@@ -1,9 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/build/classes" />
+-  </component>
+-  <component name="ProjectType">
+-    <option name="id" value="Android" />
+-  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="Embedded JDK" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <compositeConfiguration>\n          <compositeBuild compositeDefinitionSource=\"SCRIPT\" />\n        </compositeConfiguration>\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 9f62392f2b04ab86aa8cbfbb4ece3ce6a61bda7d)
++++ b/.idea/gradle.xml	(date 1632683344947)
+@@ -1,13 +1,41 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+-        <compositeConfiguration>
+-          <compositeBuild compositeDefinitionSource="SCRIPT" />
+-        </compositeConfiguration>
++        <option name="testRunner" value="GRADLE" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++            <option value="$PROJECT_DIR$/AVLTree" />
++            <option value="$PROJECT_DIR$/Arrays" />
++            <option value="$PROJECT_DIR$/BigO" />
++            <option value="$PROJECT_DIR$/BinaryHeap" />
++            <option value="$PROJECT_DIR$/BinarySearchTree" />
++            <option value="$PROJECT_DIR$/BinaryTree" />
++            <option value="$PROJECT_DIR$/CircularDoublyLinkedList" />
++            <option value="$PROJECT_DIR$/CircularLinkedList" />
++            <option value="$PROJECT_DIR$/DoublyLinkedList" />
++            <option value="$PROJECT_DIR$/Hashing" />
++            <option value="$PROJECT_DIR$/LinkedList" />
++            <option value="$PROJECT_DIR$/LinkedListProblems" />
++            <option value="$PROJECT_DIR$/QueueArray" />
++            <option value="$PROJECT_DIR$/Recursion" />
++            <option value="$PROJECT_DIR$/SearchingAlgorithms" />
++            <option value="$PROJECT_DIR$/SimpleTree" />
++            <option value="$PROJECT_DIR$/SortingAlgorithms" />
++            <option value="$PROJECT_DIR$/StackArray" />
++            <option value="$PROJECT_DIR$/StackLinkedList" />
++            <option value="$PROJECT_DIR$/StackQueueQuestions" />
++            <option value="$PROJECT_DIR$/Trie" />
++            <option value="$PROJECT_DIR$/app" />
++            <option value="$PROJECT_DIR$/greedy-algorithms" />
++            <option value="$PROJECT_DIR$/greedyalgorithms" />
++          </set>
++        </option>
+         <option name="resolveModulePerSourceSet" value="false" />
+       </GradleProjectSettings>
+     </option>
+Index: app/greedyalgorithms/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/src/main/res/mipmap-anydpi-v26/ic_launcher.xml b/app/greedyalgorithms/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+new file mode 100644
+--- /dev/null	(date 1632666367758)
++++ b/app/greedyalgorithms/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1632666367758)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1632682288631)
++++ b/.idea/compiler.xml	(date 1632682288631)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="1.7">
++      <module name="DataStructureandAlgorithms.app" target="11" />
++      <module name="DataStructureandAlgorithms.app.greedyalgorithms" target="11" />
++      <module name="DataStructureandAlgorithms.greedy-algorithms" target="11" />
++    </bytecodeTargetLevel>
++  </component>
++</project>
+\ No newline at end of file
+Index: greedy-algorithms/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/.gitignore b/greedy-algorithms/.gitignore
+new file mode 100644
+--- /dev/null	(date 1632682285118)
++++ b/greedy-algorithms/.gitignore	(date 1632682285118)
+@@ -0,0 +1,1 @@
++/build
+\ No newline at end of file
+Index: greedy-algorithms/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/AndroidManifest.xml b/greedy-algorithms/src/main/AndroidManifest.xml
+new file mode 100644
+--- /dev/null	(date 1632682285543)
++++ b/greedy-algorithms/src/main/AndroidManifest.xml	(date 1632682285543)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.agelmahdi.greedy_algorithms">
++
++    <application
++        android:allowBackup="true"
++        android:icon="@mipmap/ic_launcher"
++        android:label="@string/app_name"
++        android:roundIcon="@mipmap/ic_launcher_round"
++        android:supportsRtl="true"
++        android:theme="@style/Theme.DataStructureandAlgorithms" />
++
++</manifest>
+\ No newline at end of file
+Index: app/greedyalgorithms/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/.gitignore b/app/greedyalgorithms/.gitignore
+new file mode 100644
+--- /dev/null	(date 1632666366538)
++++ b/app/greedyalgorithms/.gitignore	(date 1632666366538)
+@@ -0,0 +1,1 @@
++/build
+\ No newline at end of file
+Index: greedy-algorithms/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/build.gradle b/greedy-algorithms/build.gradle
+new file mode 100644
+--- /dev/null	(date 1632682285525)
++++ b/greedy-algorithms/build.gradle	(date 1632682285525)
+@@ -0,0 +1,37 @@
++plugins {
++    id 'com.android.application'
++}
++
++android {
++    compileSdkVersion 30
++
++    defaultConfig {
++        applicationId "com.agelmahdi.greedy_algorithms"
++        minSdkVersion 21
++        targetSdkVersion 30
++        versionCode 1
++        versionName "1.0"
++
++        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
++    }
++
++    buildTypes {
++        release {
++            minifyEnabled false
++            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
++        }
++    }
++    compileOptions {
++        sourceCompatibility JavaVersion.VERSION_1_8
++        targetCompatibility JavaVersion.VERSION_1_8
++    }
++}
++
++dependencies {
++
++    implementation 'androidx.appcompat:appcompat:1.3.1'
++    implementation 'com.google.android.material:material:1.3.0'
++    testImplementation 'junit:junit:4.+'
++    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
++    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
++}
+\ No newline at end of file
+Index: LinkedList/src/main/java/com/agelmahdi/linkedlist/SingleLinkedList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.agelmahdi.linkedlist;\n\nimport org.omg.CORBA.NO_IMPLEMENT;\n\npublic class SingleLinkedList {\n    public Node head = null;\n    public Node tail = null;\n    public int size;\n\n    public Node createSLL(int nodeValue){\n\n        head = new Node(); //-----------------> O(1)\n        Node node = new Node();//-----------------> O(1)\n\n        node.value = nodeValue; //-----------------> O(1)\n        node.next = null; //-----------------> O(1)\n\n        head = node; //-----------------> O(1)\n        tail = node; //-----------------> O(1)\n\n        size = 1; //-----------------> O(1)\n\n        return head; //-----------------> O(1)\n\n        //Time Complexity O(1)\n        //Space Complexity O(1)\n\n\n    }\n\n    public void insertInSLL(int nodeValue, int nodeLocation){\n        Node node =new Node();\n        node.value = nodeValue;\n        if (head == null){\n            createSLL(nodeValue);//-----------------> O(1)\n            return;\n        }\n        else if(nodeLocation == 0){\n            node.next = head;\n            head = node;\n        }\n        else if (nodeLocation >= size){\n            node.next = null;\n            tail.next = node;\n            tail = node;\n        }\n        else {\n            Node temp = head;\n\n            int index = 0 ;\n\n            while (index < nodeLocation -1){ //-----------------> O(n)\n                temp = temp.next;\n                index++;\n            }\n            Node nextNode = temp.next;\n           // System.out.println(\"temp : \"+temp.value);\n\n            temp.next = node;\n            //System.out.println(\"temp.next : \"+temp.next.value);\n\n            node.next = nextNode;\n           // System.out.println(\"temp.next : \"+node.next.value);\n\n\n        }\n\n        size++;\n\n        //Time Complexity O(n)\n        //Space Complexity O(1)\n\n    }\n\n    public void deleteItemSLL(int location){\n\n        if (head == null){\n            return;\n        }\n        else if (location == 0){\n            head = head.next;\n\n            size--;\n            if (size ==0){\n                tail=null;\n            }\n        }\n        else if (location >= size ){\n            Node temp = head;\n            for (int i =0; i< size -1; i++){\n                temp= temp.next;\n            }\n            if (temp==head){\n                head = tail =null;\n                size--;\n                return;\n            }\n            temp.next =null;\n            tail = temp;\n            size--;\n\n        }\n        else {\n            Node current= head;\n\n            for (int i =0; i< location -1;i++){\n                current= current.next;\n            }\n\n            current.next =current.next.next;\n           // System.out.println(current.value);\n            size--;\n\n\n        }\n        //Time Complexity O(n)\n        //Space Complexity O(1)\n\n    }\n    private void deleteEntireSLL(){\n        tail=null;\n        head =null;\n        //Time Complexity O(1)\n        //Space Complexity O(1)\n    }\n    public void traverseSLL(){\n\n        if (head == null){\n            System.out.println(\"Head not found\");\n        }\n        else {\n            Node temp = head;\n            for (int i =0; i<size; i++){\n                System.out.print(temp.value);\n                if (i != size -1){\n                    System.out.print(\" -> \");\n                }\n                temp = temp.next;\n            }\n        }\n        System.out.println(\"\\n\");\n        //Time Complexity O(n)\n        //Space Complexity O(1)\n\n    }\n\n    public boolean searchSLL(int value){\n\n        if (head == null){\n            System.out.println(\"Head not found\");\n        }\n        else {\n            Node temp = head;\n            for (int i =0; i<size; i++){\n                if (temp.value == value){\n                    return true;\n                }\n\n                temp = temp.next;\n            }\n        }\n        return false;\n        //Time Complexity O(n)\n        //Space Complexity O(1)\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/LinkedList/src/main/java/com/agelmahdi/linkedlist/SingleLinkedList.java b/LinkedList/src/main/java/com/agelmahdi/linkedlist/SingleLinkedList.java
+--- a/LinkedList/src/main/java/com/agelmahdi/linkedlist/SingleLinkedList.java	(revision 9f62392f2b04ab86aa8cbfbb4ece3ce6a61bda7d)
++++ b/LinkedList/src/main/java/com/agelmahdi/linkedlist/SingleLinkedList.java	(date 1632682583391)
+@@ -1,6 +1,5 @@
+ package com.agelmahdi.linkedlist;
+ 
+-import org.omg.CORBA.NO_IMPLEMENT;
+ 
+ public class SingleLinkedList {
+     public Node head = null;
+Index: app/greedyalgorithms/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/src/main/AndroidManifest.xml b/app/greedyalgorithms/src/main/AndroidManifest.xml
+new file mode 100644
+--- /dev/null	(date 1632666367525)
++++ b/app/greedyalgorithms/src/main/AndroidManifest.xml	(date 1632666367525)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.agelmahdi.greedyalgorithms">
++
++    <application
++        android:allowBackup="true"
++        android:icon="@mipmap/ic_launcher"
++        android:label="@string/app_name"
++        android:roundIcon="@mipmap/ic_launcher_round"
++        android:supportsRtl="true"
++        android:theme="@style/Theme.DataStructureandAlgorithms" />
++
++</manifest>
+\ No newline at end of file
+Index: app/greedyalgorithms/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/build.gradle b/app/greedyalgorithms/build.gradle
+new file mode 100644
+--- /dev/null	(date 1632666367368)
++++ b/app/greedyalgorithms/build.gradle	(date 1632666367368)
+@@ -0,0 +1,37 @@
++plugins {
++    id 'com.android.application'
++}
++
++android {
++    compileSdkVersion 30
++
++    defaultConfig {
++        applicationId "com.agelmahdi.greedyalgorithms"
++        minSdkVersion 21
++        targetSdkVersion 30
++        versionCode 1
++        versionName "1.0"
++
++        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
++    }
++
++    buildTypes {
++        release {
++            minifyEnabled false
++            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
++        }
++    }
++    compileOptions {
++        sourceCompatibility JavaVersion.VERSION_1_8
++        targetCompatibility JavaVersion.VERSION_1_8
++    }
++}
++
++dependencies {
++
++    implementation 'androidx.appcompat:appcompat:1.3.1'
++    implementation 'com.google.android.material:material:1.3.0'
++    testImplementation 'junit:junit:4.+'
++    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
++    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
++}
+\ No newline at end of file
+Index: greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/Readme
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/Readme b/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/Readme
+new file mode 100644
+--- /dev/null	(date 1632680549644)
++++ b/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/Readme	(date 1632680549644)
+@@ -0,0 +1,33 @@
++1. What is Greedy Algorithms?
++  A. it is an algorithmic paradigm that build the solution piece by piece
++  B. in each step it chooses the piece that offers most obvious and immediate benefit
++  C. it fits perfectly for those solutions  in which local optimal solution lead to global solution
++
++2. Problems solved by Greedy Algorithm?
++  - Insertion sort:
++    A. Divide an array into two parts which are sorted and unsorted.
++    B. from the unsorted array we take the first element and put it in its perfect location in the sorted array.
++
++  - Selection sort:
++    A. Divide an array into two parts which are sorted and unsorted.
++    B. at each iteration we are finding the minimum element from unsorted array and put it in its location in the sorted array.
++
++  - Topological Sort: sorts a given action in such a way that if there is a dependency of one action on another,
++    then the dependant action always comes later than its parent action.
++
++  - Prims Algorithm: it finds a minimum spanning tree for weighted undirected graphs.
++    A. Take any vertex a s a source set its weight to 0 and all  other vertices weight to infinity.
++    B. for every adjacent vertices if the current weight is more than current edge then we set it to current edge.
++    C. then make mark current as visited.
++    D. repeat these steps for all vertices in increasing order of weight.
++
++  - Kruskal Algorithm: it finds a minimum spanning tree for weighted undirected graphs.
++    A. Add increasing cost edges at each step
++    B. Avoid any cycle at each step
++
++  - Activity selection problem: Given N number of activities with their start and end times.
++   We need to select the maximum number of activities that can performed by a single person,
++   assuming that a person can only work on a single activity at a time.
++
++  - Coin change problem
++  - Fractional knapsack problem
+\ No newline at end of file
+Index: greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/ActivitySelection.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/ActivitySelection.java b/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/ActivitySelection.java
+new file mode 100644
+--- /dev/null	(date 1632682355795)
++++ b/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/ActivitySelection.java	(date 1632682355795)
+@@ -0,0 +1,36 @@
++package com.agelmahdi.greedy_algorithms.ActivitySelectionProblem;
++
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.Comparator;
++
++public class ActivitySelection {
++    private ArrayList<Activity> activities = new ArrayList<>();
++
++    public ActivitySelection(ArrayList<Activity> activities) {
++        this.activities = activities;
++    }
++
++    private void sort() {
++
++    }
++
++    public void maxNumberOfActivities() {
++        Comparator<Activity> comparator = new Comparator<Activity>() {
++            @Override
++            public int compare(Activity a1, Activity a2) {
++                return a1.getEndTime() - a2.getEndTime();
++            }
++        };
++
++        int max = 1;
++        Collections.sort(activities, comparator);
++        for (int i = 0; i < activities.size(); i++) {
++            if (activities.get(0).getEndTime() < activities.get(i + 1).getStartTime()) {
++                max++;
++            }
++        }
++        System.out.println(max);
++
++    }
++}
+Index: greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/Main.java b/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/Main.java
+new file mode 100644
+--- /dev/null	(date 1632682355790)
++++ b/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/Main.java	(date 1632682355790)
+@@ -0,0 +1,26 @@
++package com.agelmahdi.greedy_algorithms.ActivitySelectionProblem;
++
++import java.util.ArrayList;
++
++public class Main {
++    public static void main(String[] args) {
++
++        ArrayList<Activity> activities = new ArrayList<>();
++        Activity a1 = new Activity("A1",0,6);
++        Activity a2 = new Activity("A2",3,4);
++        Activity a3 = new Activity("A3",1,2);
++        Activity a4 = new Activity("A4",5,8);
++        Activity a5 = new Activity("A5",5,7);
++        Activity a6 = new Activity("A6",8,9);
++
++        activities.add(a1);
++        activities.add(a2);
++        activities.add(a3);
++        activities.add(a4);
++        activities.add(a5);
++        activities.add(a6);
++
++        ActivitySelection activitySelection = new ActivitySelection(activities);
++        activitySelection.maxNumberOfActivities();
++    }
++}
+Index: greedy-algorithms/src/main/res/values-night/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/res/values-night/themes.xml b/greedy-algorithms/src/main/res/values-night/themes.xml
+new file mode 100644
+--- /dev/null	(date 1632682285817)
++++ b/greedy-algorithms/src/main/res/values-night/themes.xml	(date 1632682285817)
+@@ -0,0 +1,16 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Theme.DataStructureandAlgorithms" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++        <!-- Primary brand color. -->
++        <item name="colorPrimary">@color/purple_200</item>
++        <item name="colorPrimaryVariant">@color/purple_700</item>
++        <item name="colorOnPrimary">@color/black</item>
++        <!-- Secondary brand color. -->
++        <item name="colorSecondary">@color/teal_200</item>
++        <item name="colorSecondaryVariant">@color/teal_200</item>
++        <item name="colorOnSecondary">@color/black</item>
++        <!-- Status bar color. -->
++        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
++        <!-- Customize your theme here. -->
++    </style>
++</resources>
+\ No newline at end of file
+Index: greedy-algorithms/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/res/values/colors.xml b/greedy-algorithms/src/main/res/values/colors.xml
+new file mode 100644
+--- /dev/null	(date 1632682285803)
++++ b/greedy-algorithms/src/main/res/values/colors.xml	(date 1632682285803)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="purple_200">#FFBB86FC</color>
++    <color name="purple_500">#FF6200EE</color>
++    <color name="purple_700">#FF3700B3</color>
++    <color name="teal_200">#FF03DAC5</color>
++    <color name="teal_700">#FF018786</color>
++    <color name="black">#FF000000</color>
++    <color name="white">#FFFFFFFF</color>
++</resources>
+\ No newline at end of file
+Index: greedy-algorithms/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/res/values/themes.xml b/greedy-algorithms/src/main/res/values/themes.xml
+new file mode 100644
+--- /dev/null	(date 1632682285790)
++++ b/greedy-algorithms/src/main/res/values/themes.xml	(date 1632682285790)
+@@ -0,0 +1,16 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Theme.DataStructureandAlgorithms" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++        <!-- Primary brand color. -->
++        <item name="colorPrimary">@color/purple_500</item>
++        <item name="colorPrimaryVariant">@color/purple_700</item>
++        <item name="colorOnPrimary">@color/white</item>
++        <!-- Secondary brand color. -->
++        <item name="colorSecondary">@color/teal_200</item>
++        <item name="colorSecondaryVariant">@color/teal_700</item>
++        <item name="colorOnSecondary">@color/black</item>
++        <!-- Status bar color. -->
++        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
++        <!-- Customize your theme here. -->
++    </style>
++</resources>
+\ No newline at end of file
+Index: greedy-algorithms/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/res/values/strings.xml b/greedy-algorithms/src/main/res/values/strings.xml
+new file mode 100644
+--- /dev/null	(date 1632682285275)
++++ b/greedy-algorithms/src/main/res/values/strings.xml	(date 1632682285275)
+@@ -0,0 +1,3 @@
++<resources>
++    <string name="app_name">Greedy-Algorithms</string>
++</resources>
+\ No newline at end of file
+Index: greedy-algorithms/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml b/greedy-algorithms/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+new file mode 100644
+--- /dev/null	(date 1632682285765)
++++ b/greedy-algorithms/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1632682285765)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file
+Index: greedy-algorithms/src/main/res/drawable-v24/ic_launcher_foreground.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/res/drawable-v24/ic_launcher_foreground.xml b/greedy-algorithms/src/main/res/drawable-v24/ic_launcher_foreground.xml
+new file mode 100644
+--- /dev/null	(date 1632682285757)
++++ b/greedy-algorithms/src/main/res/drawable-v24/ic_launcher_foreground.xml	(date 1632682285757)
+@@ -0,0 +1,30 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
++        <aapt:attr name="android:fillColor">
++            <gradient
++                android:endX="85.84757"
++                android:endY="92.4963"
++                android:startX="42.9492"
++                android:startY="49.59793"
++                android:type="linear">
++                <item
++                    android:color="#44000000"
++                    android:offset="0.0" />
++                <item
++                    android:color="#00000000"
++                    android:offset="1.0" />
++            </gradient>
++        </aapt:attr>
++    </path>
++    <path
++        android:fillColor="#FFFFFF"
++        android:fillType="nonZero"
++        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
++        android:strokeWidth="1"
++        android:strokeColor="#00000000" />
++</vector>
+\ No newline at end of file
+Index: greedy-algorithms/src/main/res/drawable/ic_launcher_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/res/drawable/ic_launcher_background.xml b/greedy-algorithms/src/main/res/drawable/ic_launcher_background.xml
+new file mode 100644
+--- /dev/null	(date 1632682285747)
++++ b/greedy-algorithms/src/main/res/drawable/ic_launcher_background.xml	(date 1632682285747)
+@@ -0,0 +1,170 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path
++        android:fillColor="#3DDC84"
++        android:pathData="M0,0h108v108h-108z" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M9,0L9,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,0L19,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,0L29,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,0L39,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,0L49,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,0L59,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,0L69,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,0L79,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M89,0L89,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M99,0L99,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,9L108,9"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,19L108,19"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,29L108,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,39L108,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,49L108,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,59L108,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,69L108,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,79L108,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,89L108,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,99L108,99"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,29L89,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,39L89,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,49L89,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,59L89,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,69L89,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,79L89,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,19L29,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,19L39,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,19L49,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,19L59,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,19L69,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,19L79,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++</vector>
+Index: greedy-algorithms/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/res/mipmap-anydpi-v26/ic_launcher.xml b/greedy-algorithms/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+new file mode 100644
+--- /dev/null	(date 1632682285605)
++++ b/greedy-algorithms/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1632682285605)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file
+Index: app/greedyalgorithms/src/main/res/values-night/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/src/main/res/values-night/themes.xml b/app/greedyalgorithms/src/main/res/values-night/themes.xml
+new file mode 100644
+--- /dev/null	(date 1632666368394)
++++ b/app/greedyalgorithms/src/main/res/values-night/themes.xml	(date 1632666368394)
+@@ -0,0 +1,16 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Theme.DataStructureandAlgorithms" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++        <!-- Primary brand color. -->
++        <item name="colorPrimary">@color/purple_200</item>
++        <item name="colorPrimaryVariant">@color/purple_700</item>
++        <item name="colorOnPrimary">@color/black</item>
++        <!-- Secondary brand color. -->
++        <item name="colorSecondary">@color/teal_200</item>
++        <item name="colorSecondaryVariant">@color/teal_200</item>
++        <item name="colorOnSecondary">@color/black</item>
++        <!-- Status bar color. -->
++        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
++        <!-- Customize your theme here. -->
++    </style>
++</resources>
+\ No newline at end of file
+Index: greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/Activity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/Activity.java b/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/Activity.java
+new file mode 100644
+--- /dev/null	(date 1632682355793)
++++ b/greedy-algorithms/src/main/java/com/agelmahdi/greedy_algorithms/ActivitySelectionProblem/Activity.java	(date 1632682355793)
+@@ -0,0 +1,40 @@
++package com.agelmahdi.greedy_algorithms.ActivitySelectionProblem;
++
++public class Activity {
++    private String activity;
++    private int startTime;
++    private int endTime;
++
++    public Activity( String activityName,
++             int startTime,
++             int endTime){
++        this.activity=activityName;
++        this.startTime=startTime;
++        this.endTime = endTime;
++
++    }
++
++    public String getActivity() {
++        return activity;
++    }
++
++    public void setActivity(String activity) {
++        this.activity = activity;
++    }
++
++    public int getStartTime() {
++        return startTime;
++    }
++
++    public void setStartTime(int startTime) {
++        this.startTime = startTime;
++    }
++
++    public int getEndTime() {
++        return endTime;
++    }
++
++    public void setEndTime(int endTime) {
++        this.endTime = endTime;
++    }
++}
+Index: app/greedyalgorithms/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/proguard-rules.pro b/app/greedyalgorithms/proguard-rules.pro
+new file mode 100644
+--- /dev/null	(date 1632666366612)
++++ b/app/greedyalgorithms/proguard-rules.pro	(date 1632666366612)
+@@ -0,0 +1,21 @@
++# Add project specific ProGuard rules here.
++# You can control the set of applied configuration files using the
++# proguardFiles setting in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}
++
++# Uncomment this to preserve the line number information for
++# debugging stack traces.
++#-keepattributes SourceFile,LineNumberTable
++
++# If you keep the line number information, uncomment this to
++# hide the original source file name.
++#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: app/greedyalgorithms/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/src/main/res/values/colors.xml b/app/greedyalgorithms/src/main/res/values/colors.xml
+new file mode 100644
+--- /dev/null	(date 1632666368366)
++++ b/app/greedyalgorithms/src/main/res/values/colors.xml	(date 1632666368366)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="purple_200">#FFBB86FC</color>
++    <color name="purple_500">#FF6200EE</color>
++    <color name="purple_700">#FF3700B3</color>
++    <color name="teal_200">#FF03DAC5</color>
++    <color name="teal_700">#FF018786</color>
++    <color name="black">#FF000000</color>
++    <color name="white">#FFFFFFFF</color>
++</resources>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1632666536406)
++++ b/.idea/jarRepositories.xml	(date 1632666536406)
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="BintrayJCenter" />
++      <option name="name" value="BintrayJCenter" />
++      <option name="url" value="https://jcenter.bintray.com/" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="Google" />
++      <option name="name" value="Google" />
++      <option name="url" value="https://dl.google.com/dl/android/maven2/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/greedyalgorithms/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/src/main/res/values/themes.xml b/app/greedyalgorithms/src/main/res/values/themes.xml
+new file mode 100644
+--- /dev/null	(date 1632666368340)
++++ b/app/greedyalgorithms/src/main/res/values/themes.xml	(date 1632666368340)
+@@ -0,0 +1,16 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Theme.DataStructureandAlgorithms" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++        <!-- Primary brand color. -->
++        <item name="colorPrimary">@color/purple_500</item>
++        <item name="colorPrimaryVariant">@color/purple_700</item>
++        <item name="colorOnPrimary">@color/white</item>
++        <!-- Secondary brand color. -->
++        <item name="colorSecondary">@color/teal_200</item>
++        <item name="colorSecondaryVariant">@color/teal_700</item>
++        <item name="colorOnSecondary">@color/black</item>
++        <!-- Status bar color. -->
++        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
++        <!-- Customize your theme here. -->
++    </style>
++</resources>
+\ No newline at end of file
+Index: app/greedyalgorithms/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/src/main/res/values/strings.xml b/app/greedyalgorithms/src/main/res/values/strings.xml
+new file mode 100644
+--- /dev/null	(date 1632666366748)
++++ b/app/greedyalgorithms/src/main/res/values/strings.xml	(date 1632666366748)
+@@ -0,0 +1,3 @@
++<resources>
++    <string name="app_name">GreedyAlgorithms</string>
++</resources>
+\ No newline at end of file
+Index: greedy-algorithms/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/greedy-algorithms/proguard-rules.pro b/greedy-algorithms/proguard-rules.pro
+new file mode 100644
+--- /dev/null	(date 1632682285147)
++++ b/greedy-algorithms/proguard-rules.pro	(date 1632682285147)
+@@ -0,0 +1,21 @@
++# Add project specific ProGuard rules here.
++# You can control the set of applied configuration files using the
++# proguardFiles setting in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}
++
++# Uncomment this to preserve the line number information for
++# debugging stack traces.
++#-keepattributes SourceFile,LineNumberTable
++
++# If you keep the line number information, uncomment this to
++# hide the original source file name.
++#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: app/greedyalgorithms/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/greedyalgorithms/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml b/app/greedyalgorithms/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+new file mode 100644
+--- /dev/null	(date 1632666368070)
++++ b/app/greedyalgorithms/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1632666368070)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file

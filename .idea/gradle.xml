@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/LinkedList" />
             <option value="$PROJECT_DIR$/LinkedListProblems" />
             <option value="$PROJECT_DIR$/QueueArray" />
+            <option value="$PROJECT_DIR$/QueueLinkedList" />
             <option value="$PROJECT_DIR$/Recursion" />
             <option value="$PROJECT_DIR$/SearchingAlgorithms" />
             <option value="$PROJECT_DIR$/SimpleTree" />
@@ -34,6 +35,7 @@
             <option value="$PROJECT_DIR$/StackQueueQuestions" />
             <option value="$PROJECT_DIR$/Trie" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/greedy-algorithms" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
