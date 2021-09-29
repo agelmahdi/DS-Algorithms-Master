@@ -8,7 +8,10 @@ public class Main {
 
         int []Houses = {6,7,1,30,8,2,4};
         HouseRobber houseRobber = new HouseRobber();
-        System.out.println(houseRobber.maxValue(Houses));
+      //  System.out.println(houseRobber.maxValue(Houses));
+
+        ConvertStringToAnother convertStringToAnother = new ConvertStringToAnother();
+        System.out.println(convertStringToAnother.findMinOperations("table","tbres"));
 
     }
 }
