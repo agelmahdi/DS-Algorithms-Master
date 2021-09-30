@@ -16,7 +16,10 @@ public class Main {
         ZeroOneKnapsack zeroOneKnapsack = new ZeroOneKnapsack();
         int[] profits = {31, 26, 17, 72};
         int[] weights = {3, 1, 2, 5};
-        System.out.println(zeroOneKnapsack.zeroOneKnapsack(profits, weights, 7));
+       // System.out.println(zeroOneKnapsack.zeroOneKnapsack(profits, weights, 7));
+
+        LongestCommonSubsequence lcs = new LongestCommonSubsequence();
+        System.out.println(lcs.findMaxLCSQ("elephant","erepat"));
 
     }
 }
