@@ -19,7 +19,11 @@ public class Main {
        // System.out.println(zeroOneKnapsack.zeroOneKnapsack(profits, weights, 7));
 
         LongestCommonSubsequence lcs = new LongestCommonSubsequence();
-        System.out.println(lcs.findMaxLCSQ("elephant","erepat"));
+       // System.out.println(lcs.findMaxLCSQ("elephant","erepat"));
+
+        LongestPalindromicSubsequence lpcs = new LongestPalindromicSubsequence();
+        System.out.println(lpcs.findLPSQ("elrmenmet"));
+
 
     }
 }
