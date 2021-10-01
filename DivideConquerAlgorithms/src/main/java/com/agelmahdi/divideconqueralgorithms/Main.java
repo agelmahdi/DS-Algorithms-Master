@@ -22,7 +22,19 @@ public class Main {
        // System.out.println(lcs.findMaxLCSQ("elephant","erepat"));
 
         LongestPalindromicSubsequence lpcs = new LongestPalindromicSubsequence();
-        System.out.println(lpcs.findLPSQ("elrmenmet"));
+       // System.out.println(lpcs.findLPSQ("elrmenmet"));
+
+        MinimumCostReachLastCell mc = new MinimumCostReachLastCell();
+
+        int [][]matrix = {
+                {4,7,8,6,4},
+                {6,7,3,9,2},
+                {3,8,1,2,4},
+                {7,1,7,3,7},
+                {2,9,8,9,3},
+        };
+
+        System.out.println(mc.findMCTLC(matrix));
 
 
     }
