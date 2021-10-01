@@ -16,25 +16,36 @@ public class Main {
         ZeroOneKnapsack zeroOneKnapsack = new ZeroOneKnapsack();
         int[] profits = {31, 26, 17, 72};
         int[] weights = {3, 1, 2, 5};
-       // System.out.println(zeroOneKnapsack.zeroOneKnapsack(profits, weights, 7));
+        // System.out.println(zeroOneKnapsack.zeroOneKnapsack(profits, weights, 7));
 
         LongestCommonSubsequence lcs = new LongestCommonSubsequence();
-       // System.out.println(lcs.findMaxLCSQ("elephant","erepat"));
+        // System.out.println(lcs.findMaxLCSQ("elephant","erepat"));
 
         LongestPalindromicSubsequence lpcs = new LongestPalindromicSubsequence();
-       // System.out.println(lpcs.findLPSQ("elrmenmet"));
+        // System.out.println(lpcs.findLPSQ("elrmenmet"));
 
         MinimumCostReachLastCell mc = new MinimumCostReachLastCell();
 
-        int [][]matrix = {
-                {4,7,8,6,4},
-                {6,7,3,9,2},
-                {3,8,1,2,4},
-                {7,1,7,3,7},
-                {2,9,8,9,3},
-        };
+//        int [][]matrix = {
+//                {4,7,8,6,4},
+//                {6,7,3,9,2},
+//                {3,8,1,2,4},
+//                {7,1,7,3,7},
+//                {2,9,8,9,3},
+//        };
 
-        System.out.println(mc.findMCTLC(matrix));
+        // System.out.println(mc.findMCTLC(matrix));
+
+        NumberOfPathsToReachLast nop = new NumberOfPathsToReachLast();
+
+        int[][] matrix = {
+                {4, 7, 1, 6},
+                {5, 7, 3, 9},
+                {3, 2, 1, 2},
+                {7, 1, 6, 3},
+
+        };
+        System.out.println(nop.findNOPTRLC(matrix, 25));
 
 
     }
