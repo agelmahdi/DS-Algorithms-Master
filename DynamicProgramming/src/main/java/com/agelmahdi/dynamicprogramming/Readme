@@ -1,0 +1,13 @@
+1. What is Dynamic Programming "DP"?
+  - DP is an algorithmic technique for solving an optimization problem by
+       breaking it down into simpler sub-problems and utilizing the fact that the optimal solution to the overall problem depends upon the optimal solution to its sub-problems.
+
+2. Properties of Dynamic programming:
+   A. Optimal Substructure: if any problem's overall optimal solution can be constructed from the optimal solutions of its sub-problem,
+      then this problem has an optimal substructure.
+   B. Overlapping Sub-problems: sub-problems are the smaller versions of the original problem.
+      any problem has overlapping sub-problems if finding its solution involves solving the same sub-problems multiple times.
+
+3. Dynamic Programming techniques
+   A. Top down with Memoization: solve the bigger problem by recursively finding the solution to smaller problems. Whenever we solve a sub-problem,
+      we cache its results so that we don't end up solving it repeatedly if it is called multiple times. this technique of sorting the results of already solved sub-problems.

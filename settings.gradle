@@ -1,2 +1,3 @@
 include ':app', ':Recursion', ':BigO', ':Arrays', ':LinkedList', ':CircularLinkedList', ':DoublyLinkedList', ':CircularDoublyLinkedList', ':LinkedListProblems', ':StackArray', ':StackLinkedList', ':QueueArray',':StackQueueQuestions', ':SimpleTree', ':BinaryTree', ':BinarySearchTree', ':AVLTree', ':BinaryHeap', ':Trie', ':Hashing', ':SortingAlgorithms', ':SearchingAlgorithms',':greedy-algorithms',':QueueLinkedList',':Graphs'
 include ':DivideConquerAlgorithms'
+include ':DynamicProgramming'
