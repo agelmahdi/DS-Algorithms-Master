@@ -8,5 +8,6 @@ public class Main {
        // fib.print();
         NumberFactor nf = new NumberFactor();
         System.out.println(nf.numberFactorMemo(5));
+        System.out.println(nf.numberFactorTabular(5));
     }
 }

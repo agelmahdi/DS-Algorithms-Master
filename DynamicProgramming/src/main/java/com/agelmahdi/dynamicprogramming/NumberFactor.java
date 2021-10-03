@@ -27,4 +27,14 @@ class NumberFactor {
         return numFactorMemo(number,memo);
     }
 
+    public int numberFactorTabular(int number){
+        int []tabular = new int[number +1];
+        tabular[0] = tabular[1] = tabular[2] =1;
+        tabular[3] = 2;
+        for (int i =4; i<= number ; i++){
+            tabular[i] = tabular[i-1] + tabular[i-3] + tabular[i-4];
+        }
+
+        return tabular[number];
+    }
 }
