@@ -11,3 +11,16 @@
 3. Dynamic Programming techniques
    A. Top down with Memoization: solve the bigger problem by recursively finding the solution to smaller problems. Whenever we solve a sub-problem,
       we cache its results so that we don't end up solving it repeatedly if it is called multiple times. this technique of sorting the results of already solved sub-problems.
+
+   B. Bottom up with Tabulation: is the opposite of the top down approach and avoids recursion. In this approach, we solve the problem bottom up, by solving all related sub-problems first,
+      this is done by filling up a table. Based on the result in the table, the solution to top/original problem then computed.
+
+4.                                    Top down                                     Bottom up
+        Easyness  |     Easy to come up with solution as it is     |    Difficult to come up with solution.
+                  |     extension of divide and conquer.           |
+        Runtime   |     Slow.                                      |    Fast.
+        Space     |     Unnecessary use of stack memory space.     |    Stack memory is not used.
+        Usage     |     Quick solution.                            |    Efficient solution.
+
+
+
