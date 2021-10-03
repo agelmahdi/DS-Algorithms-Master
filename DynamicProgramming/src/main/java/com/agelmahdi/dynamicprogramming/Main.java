@@ -7,7 +7,11 @@ public class Main {
        // System.out.println(fib.fibTabular(10));
        // fib.print();
         NumberFactor nf = new NumberFactor();
-        System.out.println(nf.numberFactorMemo(5));
-        System.out.println(nf.numberFactorTabular(5));
+       // System.out.println(nf.numberFactorMemo(5));
+      //  System.out.println(nf.numberFactorTabular(5));
+
+        HouseRobber hr = new HouseRobber();
+        int[] houses = {6, 7, 1, 30, 8, 2, 4};
+        System.out.println(hr.maxValueMemo(houses));
     }
 }
