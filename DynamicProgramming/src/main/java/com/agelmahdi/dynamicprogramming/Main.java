@@ -12,7 +12,10 @@ public class Main {
 
         HouseRobber hr = new HouseRobber();
         int[] houses = {6, 7, 1, 30, 8, 2, 4};
-        System.out.println(hr.maxValueMemo(houses));
-        System.out.println(hr.maxValueTabular(houses));
+       // System.out.println(hr.maxValueMemo(houses));
+       // System.out.println(hr.maxValueTabular(houses));
+
+        ConvertStrToAnother cs = new ConvertStrToAnother();
+        System.out.println(cs.findMinOperationsMemo("catch","carch"));
     }
 }

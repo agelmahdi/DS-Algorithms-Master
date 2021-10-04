@@ -11,7 +11,7 @@ public class Main {
         //  System.out.println(houseRobber.maxValue(Houses));
 
         ConvertStringToAnother convertStringToAnother = new ConvertStringToAnother();
-        // System.out.println(convertStringToAnother.findMinOperations("table","tbres"));
+         System.out.println(convertStringToAnother.findMinOperations("table","tbres"));
 
         ZeroOneKnapsack zeroOneKnapsack = new ZeroOneKnapsack();
         int[] profits = {31, 26, 17, 72};
@@ -45,7 +45,7 @@ public class Main {
                 {7, 1, 6, 3},
 
         };
-        System.out.println(nop.findNOPTRLC(matrix, 25));
+      //  System.out.println(nop.findNOPTRLC(matrix, 25));
 
 
     }
