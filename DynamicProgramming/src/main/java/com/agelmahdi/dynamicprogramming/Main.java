@@ -18,5 +18,6 @@ public class Main {
         ConvertStrToAnother cs = new ConvertStrToAnother();
         System.out.println(cs.findMinOperationsMemo("table","tbres"));
         System.out.println(cs.convertStrTabular("table","tbres"));
+        cs.printChanges();
     }
 }
