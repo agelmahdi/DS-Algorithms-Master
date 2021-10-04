@@ -16,6 +16,7 @@ public class Main {
        // System.out.println(hr.maxValueTabular(houses));
 
         ConvertStrToAnother cs = new ConvertStrToAnother();
-        System.out.println(cs.findMinOperationsMemo("catch","carch"));
+        System.out.println(cs.findMinOperationsMemo("table","tbres"));
+        System.out.println(cs.convertStrTabular("table","tbres"));
     }
 }
