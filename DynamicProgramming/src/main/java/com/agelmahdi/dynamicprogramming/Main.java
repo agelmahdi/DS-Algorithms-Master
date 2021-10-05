@@ -16,8 +16,15 @@ public class Main {
        // System.out.println(hr.maxValueTabular(houses));
 
         ConvertStrToAnother cs = new ConvertStrToAnother();
-        System.out.println(cs.findMinOperationsMemo("table","tbres"));
-        System.out.println(cs.convertStrTabular("table","tbres"));
-        cs.printChanges();
+//        System.out.println(cs.findMinOperationsMemo("table","tbres"));
+//        System.out.println(cs.convertStrTabular("table","tbres"));
+//        cs.printChanges();
+
+        ZeroOneKnapsack zeroOneKnapsack = new ZeroOneKnapsack();
+        int[] profits = {31, 26, 17, 72};
+        int[] weights = {3, 1, 2, 5};
+        System.out.println(zeroOneKnapsack.zeroOneKnapsack(profits, weights, 40));
+        System.out.println(zeroOneKnapsack.zeroOneKnapsackMemo(profits, weights, 40));
+        System.out.println(zeroOneKnapsack.zeroOneKnapsackTabular(profits, weights, 7));
     }
 }
