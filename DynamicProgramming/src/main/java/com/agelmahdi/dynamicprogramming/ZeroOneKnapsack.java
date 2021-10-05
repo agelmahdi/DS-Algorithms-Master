@@ -28,25 +28,25 @@ class ZeroOneKnapsack {
         return this.knapsack(profits, weights, capacity, 0);
     }
 
-    private int knapsackMemo(int[] profits, int[] weights, int[] memo, int capacity, int currentIndex) {
+    private int knapsackMemo(int[] profits, int[] weights, int[][] memo, int capacity, int currentIndex) {
         if (capacity <= 0 || currentIndex < 0 || currentIndex >= profits.length) {
             return 0;
         }
-        if (memo[currentIndex] == 0) {
+        if (memo[currentIndex][capacity] == 0) {
             int p1 = 0;
             if (weights[currentIndex] <= capacity) {
-                p1 = profits[currentIndex] + knapsack(profits, weights, capacity - weights[currentIndex], currentIndex + 1);
+                p1 = profits[currentIndex] + knapsackMemo(profits, weights, memo,capacity - weights[currentIndex], currentIndex + 1);
             }
-            int p2 = knapsack(profits, weights, capacity, currentIndex + 1);
+            int p2 = knapsackMemo(profits, weights,memo, capacity, currentIndex + 1);
 
-            memo[currentIndex] = max(p1, p2);
+            memo[currentIndex][capacity] = max(p1, p2);
         }
 
-        return memo[currentIndex];
+        return memo[currentIndex][capacity];
     }
 
     public int zeroOneKnapsackMemo(int[] profits, int[] weights, int capacity) {
-        int[] memo = new int[profits.length - 1];
+        int[][] memo = new int[profits.length][capacity+1];
         return this.knapsackMemo(profits, weights, memo, capacity, 0);
     }
 
