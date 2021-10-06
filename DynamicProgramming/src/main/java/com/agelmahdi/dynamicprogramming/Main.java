@@ -28,9 +28,12 @@ public class Main {
 //        System.out.println(zeroOneKnapsack.zeroOneKnapsackTabular(profits, weights, 7));
 
         LongestCommonSubsequence lcs = new LongestCommonSubsequence();
-        System.out.println(lcs.lcsRecursion("elephant", "erepat"));
-        System.out.println(lcs.lcsMemo("elephant", "erepat"));
-        System.out.println(lcs.lcsTabular("elephant", "erepat"));
-        lcs.printLCS();
+//        System.out.println(lcs.lcsRecursion("elephant", "erepat"));
+//        System.out.println(lcs.lcsMemo("elephant", "erepat"));
+//        System.out.println(lcs.lcsTabular("elephant", "erepat"));
+//        lcs.printLCS();
+
+        LongestPalindromicSubsequence lpcs = new LongestPalindromicSubsequence();
+        System.out.println(lpcs.findLPSQRecursion("elrmenment"));
     }
 }
