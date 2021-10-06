@@ -35,5 +35,6 @@ public class Main {
 
         LongestPalindromicSubsequence lpcs = new LongestPalindromicSubsequence();
         System.out.println(lpcs.findLPSQRecursion("elrmenment"));
+        System.out.println(lpcs.findLPSQMemo("a"));
     }
 }
