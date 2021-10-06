@@ -1,5 +1,7 @@
 package com.agelmahdi.dynamicprogramming;
 
+import com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -35,6 +37,7 @@ class LongestPalindromicSubsequence {
     public int findLPSQRecursion(String str) {
         return lpsqRecursion(str, 0, str.length() - 1);
     }
+
     private int lpsqMemo(String str, int startIndex, int endIndex, int[][] memo) {
         if (startIndex > endIndex) {
             return 0;
@@ -43,17 +46,16 @@ class LongestPalindromicSubsequence {
             return 1;
         }
 
-        if (memo[startIndex][endIndex] == 0){
+        if (memo[startIndex][endIndex] == 0) {
             int count1 = 0;
             if (str.charAt(startIndex) == str.charAt(endIndex)) {
-                count1 = 2 + lpsqMemo(str, startIndex + 1, endIndex - 1,memo);
+                count1 = 2 + lpsqMemo(str, startIndex + 1, endIndex - 1, memo);
             }
-            int count2 = lpsqMemo(str, startIndex + 1, endIndex,memo);
-            int count3 = lpsqMemo(str, startIndex, endIndex - 1,memo);
+            int count2 = lpsqMemo(str, startIndex + 1, endIndex, memo);
+            int count3 = lpsqMemo(str, startIndex, endIndex - 1, memo);
 
             memo[startIndex][endIndex] = Math.max(count1, Math.max(count2, count3));
         }
-
 
         return memo[startIndex][endIndex];
 
@@ -61,6 +63,7 @@ class LongestPalindromicSubsequence {
 
     public int findLPSQMemo(String str) {
         int[][] memo = new int[str.length()][str.length()];
-        return lpsqMemo(str, 0, str.length() - 1,memo);
+        return lpsqMemo(str, 0, str.length() - 1, memo);
     }
+
 }
