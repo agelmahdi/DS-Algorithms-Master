@@ -10,6 +10,18 @@ public class Main {
         };
 
         SearchSortedMatrix sortedMatrix = new SearchSortedMatrix();
-        sortedMatrix.searchInMatrix(matrix,4);
+     //   sortedMatrix.searchInMatrix(matrix,4);
+
+        int [][]binaryMatrix = {
+                {1,0,0,1},
+                {1,1,1,0},
+                {1,0,0,1},
+                {1,0,0,1},
+                {1,1,1,0},
+        };
+
+        PrintUniqueRows printUniqueRows = new PrintUniqueRows();
+        //printUniqueRows.uniqueMatrix(binaryMatrix);
+        printUniqueRows.uniqueMatrixOptimal(binaryMatrix);
     }
 }
