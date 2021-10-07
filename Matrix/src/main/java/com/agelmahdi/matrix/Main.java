@@ -12,16 +12,28 @@ public class Main {
         SearchSortedMatrix sortedMatrix = new SearchSortedMatrix();
      //   sortedMatrix.searchInMatrix(matrix,4);
 
-        int [][]binaryMatrix = {
-                {1,0,0,1},
-                {1,1,1,0},
-                {1,0,0,1},
-                {1,0,0,1},
-                {1,1,1,0},
-        };
+//        int [][]binaryMatrix = {
+//                {1,0,0,1},
+//                {1,1,1,0},
+//                {1,0,0,1},
+//                {1,0,0,1},
+//                {1,1,1,0},
+//        };
 
         PrintUniqueRows printUniqueRows = new PrintUniqueRows();
         //printUniqueRows.uniqueMatrix(binaryMatrix);
-        printUniqueRows.uniqueMatrixOptimal(binaryMatrix);
+       // printUniqueRows.uniqueMatrixOptimal(binaryMatrix);
+
+        MaximumSizeSquare maximumSizeSquare = new MaximumSizeSquare();
+        int [][]binaryMatrix = {
+                {0,1,1,0,1},
+                {1,1,0,1,0},
+                {0,1,1,1,0},
+                {0,1,1,1,0},
+                {0,1,1,1,0},
+                {0,0,0,0,0},
+        };
+
+        maximumSizeSquare.printMaxSubSquare(binaryMatrix);
     }
 }
