@@ -39,15 +39,14 @@ class PrintUniqueRows {
     // Time complexity: O( ROW x COL )
     // Space complexity: O( ROW )
     public void uniqueMatrixOptimal(int[][] matrix) {
-        int row = matrix.length;
         int col = matrix[0].length;
 
         HashSet<String> set = new HashSet<>();
 
-        for (int i = 0; i < row; i++) {
+        for (int[] rows : matrix) {
             StringBuilder key = new StringBuilder();
             for (int j = 0; j < col; j++) {
-                key.append(matrix[i][j]).append(" ");
+                key.append(rows[j]).append(" ");
             }
 
             if (!set.contains(key.toString())) {
