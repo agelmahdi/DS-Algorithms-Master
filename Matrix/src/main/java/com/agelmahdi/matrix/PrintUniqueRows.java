@@ -48,7 +48,7 @@ class PrintUniqueRows {
             for (int j = 0; j < col; j++) {
                 key.append(rows[j]).append(" ");
             }
-
+    
             if (!set.contains(key.toString())) {
                 set.add(key.toString());
                 System.out.println(key);

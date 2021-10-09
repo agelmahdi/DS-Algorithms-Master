@@ -34,7 +34,12 @@ public class Main {
 //        lcs.printLCS();
 
         LongestPalindromicSubsequence lpcs = new LongestPalindromicSubsequence();
-        System.out.println(lpcs.findLPSQRecursion("elrmenment"));
-        System.out.println(lpcs.findLPSQMemo("a"));
+//        System.out.println(lpcs.findLPSQRecursion("elrmenment"));
+//        System.out.println(lpcs.findLPSQMemo("a"));
+
+        MatrixChainMultiplication multiplication = new MatrixChainMultiplication();
+        int[] seq = {5, 4, 6, 2,7};
+
+        System.out.println(multiplication.matrixChainOrderRecursion(seq,1,seq.length-1));
     }
 }
