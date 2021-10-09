@@ -29,4 +29,24 @@ class MatrixChainMultiplication {
         return min;
     }
 
+    public int matrixMultiplicationTabular(int[] chain) {
+        int n = chain.length;
+        int[][] tabular = new int[n][n];
+        int j;
+        for (int d = 1; d < n - 1; d++) {
+            for (int i = 1; i < n - d; i++) {
+                j = i + d;
+                tabular[i][j] = Integer.MAX_VALUE;
+                for (int k = i; k <= j - 1; k++) {
+                    int sub1 = tabular[i][k] + tabular[k + 1][j] + chain[i - 1] * chain[k] * chain[j];
+                    int sub2 = tabular[i][j];
+                    tabular[i][j] = Math.min(sub1, sub2);
+                }
+
+            }
+        }
+        return tabular[1][n - 1];
+    }
+
+
 }

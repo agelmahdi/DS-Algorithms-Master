@@ -41,5 +41,6 @@ public class Main {
         int[] seq = {5, 4, 6, 2,7};
 
         System.out.println(multiplication.matrixChainOrderRecursion(seq,1,seq.length-1));
+        System.out.println(multiplication.matrixMultiplicationTabular(seq));
     }
 }
