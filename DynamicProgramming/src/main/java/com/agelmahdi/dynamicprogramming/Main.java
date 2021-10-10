@@ -40,7 +40,17 @@ public class Main {
         MatrixChainMultiplication multiplication = new MatrixChainMultiplication();
         int[] seq = {5, 4, 6, 2,7};
 
-        System.out.println(multiplication.matrixChainOrderRecursion(seq,1,seq.length-1));
-        System.out.println(multiplication.matrixMultiplicationTabular(seq));
+    //    System.out.println(multiplication.matrixChainOrderRecursion(seq,1,seq.length-1));
+       // System.out.println(multiplication.matrixMultiplicationTabular(seq));
+
+        MultiStageGraph multiStageGraph = new MultiStageGraph();
+        int[][] matrix = new int[][]{{0, 1, 2, 5, 0, 0, 0, 0},
+                {0, 0, 0, 0, 4, 11, 0, 0},
+                {0, 0, 0, 0, 9, 5, 16, 0},
+                {0, 0, 0, 0, 0, 0, 2, 0},
+                {0, 0, 0, 0, 0, 0, 0, 18},
+                {0, 0, 0, 0, 0, 0, 0, 13},
+                {0, 0, 0, 0, 0, 0, 0, 2}};
+       System.out.println(multiStageGraph.minPathCost(matrix)) ;
     }
 }
