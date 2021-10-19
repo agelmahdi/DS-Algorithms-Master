@@ -1,6 +1,5 @@
 # Data Struture and Algorithms 
 
-Note:: To practice the code, you can simply check the relevant directory inside the repository.
 
 # Hashing
 
