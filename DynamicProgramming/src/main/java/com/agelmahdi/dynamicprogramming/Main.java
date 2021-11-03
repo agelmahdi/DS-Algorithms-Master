@@ -57,5 +57,11 @@ public class Main {
         int[] keys = {10, 20, 30, 40};
         int[] freq = {4, 2, 6, 3};
         System.out.println(optimalBinarySearchTree.optimalBinarySearchTree(keys,freq));
+
+        int found[] = {3, 3, 1, 1};
+        int unfound[] = {2, 3, 1, 1, 1};
+
+        System.out.println(optimalBinarySearchTree.optimalBinarySearchTree(keys,found,unfound));
+
     }
 }
