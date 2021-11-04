@@ -65,16 +65,18 @@ public class MyClass {
         //throw new IllegalArgumentException("Solution not found");
     }
 
-    private boolean isUnique(int []arr){
-        Arrays.sort(arr);
+    private boolean isUnique(int []nums){
 
-        for (int i = 0; i< arr.length -1;i++){
-            if (arr[i] == arr[i+1]){
-                return false;
+        if (nums.length == 0) throw new ArrayIndexOutOfBoundsException();
+
+        Arrays.sort(nums);
+
+        for (int i = 0; i< nums.length - 1;i++){
+            if (nums[i] == nums[i+1]){
+                return true;
             }
-
         }
-        return true;
+        return false;
     }
 
     private boolean isPermutation(int arr1[],int arr2[]){
