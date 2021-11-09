@@ -2,3 +2,4 @@ include ':app', ':Recursion', ':BigO', ':Arrays', ':LinkedList', ':CircularLinke
 include ':DivideConquerAlgorithms'
 include ':DynamicProgramming'
 include ':Matrix'
+include ':Strings'
