@@ -112,10 +112,10 @@ public class MyClass {
 
         //an clockwise example
 
-        for (int layer=0; layer < length/2 ;layer++){
+        for (int layer=0; layer < length / 2 ;layer++){
 
             int first = layer;
-            int last = length -1 -layer;
+            int last = length - 1 - layer;
             for (int cell = first; cell < last ; cell++){
 
                 int offset = cell - first; // to find the location of the cell of inner layer
