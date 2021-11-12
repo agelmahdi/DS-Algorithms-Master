@@ -1,3 +1,5 @@
 package com.agelmahdi.strings.challenges;
-   class LongestCommonPrefix   {
+
+public class LongestCommonPrefix {
+
 }
