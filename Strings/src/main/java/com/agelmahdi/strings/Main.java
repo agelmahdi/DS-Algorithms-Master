@@ -28,6 +28,9 @@ public class Main {
 
         System.out.println(CountandSay.countAndSay(15));
 
+        String []strs = {"flower","flow","flight"};
+
+        LongestCommonPrefix.longestCommonPrefix(strs);
 
     }
 }
