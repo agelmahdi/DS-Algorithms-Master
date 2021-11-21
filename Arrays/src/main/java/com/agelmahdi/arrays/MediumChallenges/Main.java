@@ -48,5 +48,23 @@ public class Main {
         System.out.println(LongestPalindromicSubstring.longestPalindrome("xaabacxcabaax")); //  xaabacxcabaax
 
 
+        int []numss = {1,2,3,4,5};
+        int []numss2 = {5,4,3,2,1};
+        int []numss3 = {2,1,5,0,4,6};
+        int []numss4 = {1,1,4,4,3,1,6};
+        int []numss5 = {1,3,1,1,3,1,4};
+        int []numss6 = {20,100,10,12,5,13};
+        int []numss7 = {1,5,0,4,1,3};
+        int []numss8 = {4,5,2147483647,1,2};
+
+        System.out.println(IncreasingTripletSubsequence.increasingTriplet(numss));
+        System.out.println(IncreasingTripletSubsequence.increasingTriplet(numss2));
+        System.out.println(IncreasingTripletSubsequence.increasingTriplet(numss3));
+        System.out.println(IncreasingTripletSubsequence.increasingTriplet(numss4));
+        System.out.println(IncreasingTripletSubsequence.increasingTriplet(numss5));
+        System.out.println(IncreasingTripletSubsequence.increasingTriplet(numss6));
+        System.out.println(IncreasingTripletSubsequence.increasingTriplet(numss7));
+        System.out.println(IncreasingTripletSubsequence.increasingTriplet(numss8));
+
     }
 }
