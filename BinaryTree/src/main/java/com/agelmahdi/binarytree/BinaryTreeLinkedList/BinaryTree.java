@@ -69,10 +69,10 @@ public class BinaryTree {
             Node node = queue.remove();
             System.out.print(node.value + " ");//root
             if (node.left != null) {
-                ((LinkedList<Node>) queue).add(node.left);
+                queue.add(node.left);
             }
             if (node.right != null) {
-                ((LinkedList<Node>) queue).add(node.right);
+                queue.add(node.right);
             }
 
         }
@@ -84,17 +84,17 @@ public class BinaryTree {
 
     public boolean searchBT(String value) {
         Queue<Node> queue = new LinkedList<>();
-        ((LinkedList<Node>) queue).add(root);
+        queue.add(root);
         while (!queue.isEmpty()) { // ------> Time complexity O(n)
             Node node = queue.remove();
             if (node.value.equals(value)) {
                 return true;
             } else {
                 if (node.left != null) {
-                    ((LinkedList<Node>) queue).add(node.left);
+                    queue.add(node.left);
                 }
                 if (node.right != null) {
-                    ((LinkedList<Node>) queue).add(node.right);
+                    queue.add(node.right);
                 }
             }
 
@@ -115,7 +115,7 @@ public class BinaryTree {
             return true;
         }
         Queue<Node> queue = new LinkedList<>();
-        ((LinkedList<Node>) queue).add(root);
+        queue.add(root);
 
         while (!queue.isEmpty()) {// ------> Time complexity O(n)
             Node node = queue.remove();
@@ -128,8 +128,8 @@ public class BinaryTree {
                 return true;
 
             } else {
-                ((LinkedList<Node>) queue).add(node.left);
-                ((LinkedList<Node>) queue).add(node.right);
+                queue.add(node.left);
+                queue.add(node.right);
             }
 
 
@@ -150,7 +150,7 @@ public class BinaryTree {
 
     public void deleteNode(String value) {
         Queue<Node> queue = new LinkedList<>();
-        ((LinkedList<Node>) queue).add(root);
+        queue.add(root);
         while (!queue.isEmpty()) { //------------------------->O(n)
             Node current = queue.remove();
             if (current.value.equals(value)){
@@ -159,10 +159,10 @@ public class BinaryTree {
                 return;
             }
             if (current.left!=null){
-                ((LinkedList<Node>) queue).add(current.left);
+                queue.add(current.left);
             }
             if (current.right!=null){
-                ((LinkedList<Node>) queue).add(current.right);
+                queue.add(current.right);
             }
         }
         // Time Complexity O(n)
@@ -171,15 +171,15 @@ public class BinaryTree {
 
     private Node getDeepestNode() {
         Queue<Node> queue = new LinkedList<Node>();
-        ((LinkedList<Node>) queue).add(root);
+        queue.add(root);
         Node node = null;
         while (!queue.isEmpty()) {
             node = queue.remove();
             if (node.left != null) {
-                ((LinkedList<Node>) queue).add(node.left);
+                queue.add(node.left);
             }
             if (node.right != null) {
-                ((LinkedList<Node>) queue).add(node.right);
+                queue.add(node.right);
             }
 
         }
@@ -188,7 +188,7 @@ public class BinaryTree {
 
     private void deleteDeepestNode() {
         Queue<Node> queue = new LinkedList<>();
-        ((LinkedList<Node>) queue).add(root);
+        queue.add(root);
         Node prev, current = null;
         while (!queue.isEmpty()) {
             prev = current;
@@ -201,8 +201,8 @@ public class BinaryTree {
                 current.left = null;
                 return;
             }
-            ((LinkedList<Node>) queue).add(current.left);
-            ((LinkedList<Node>) queue).add(current.right);
+            queue.add(current.left);
+            queue.add(current.right);
         }
     }
 

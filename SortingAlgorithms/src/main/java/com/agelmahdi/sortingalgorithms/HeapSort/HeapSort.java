@@ -2,7 +2,7 @@ package com.agelmahdi.sortingalgorithms.HeapSort;
 
 
 public class HeapSort {
-    private int[] array;
+    private final int[] array;
 
     public HeapSort(int[] arr) {
         this.array = arr;

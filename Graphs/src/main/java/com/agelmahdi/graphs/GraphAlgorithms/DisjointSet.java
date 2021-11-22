@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class DisjointSet {
 
-    private ArrayList<WeightedNode> nodes = new ArrayList<>();
+    private final ArrayList<WeightedNode> nodes = new ArrayList<>();
 
 
     public static void makeSet(ArrayList<WeightedNode> nodes) {

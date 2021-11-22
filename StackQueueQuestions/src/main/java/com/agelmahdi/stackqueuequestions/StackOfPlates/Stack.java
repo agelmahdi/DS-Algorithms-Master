@@ -3,7 +3,7 @@ package com.agelmahdi.stackqueuequestions.StackOfPlates;
 import java.util.EmptyStackException;
 
 public class Stack {
-    private int capacity;
+    private final int capacity;
     Node head;
     Node tail;
     int size;

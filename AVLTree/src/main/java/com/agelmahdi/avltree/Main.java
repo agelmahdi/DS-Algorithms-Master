@@ -16,10 +16,10 @@ public class Main {
         avlTree.insert(8);
         avlTree.insert(9);
 
-        avlTree.print2D(avlTree.root);
+        AVLTree.print2D(avlTree.root);
         avlTree.delete(avlTree.root,4);
         System.out.print("------------|-------------");
-        avlTree.print2D(avlTree.root);
+        AVLTree.print2D(avlTree.root);
 
 
     }

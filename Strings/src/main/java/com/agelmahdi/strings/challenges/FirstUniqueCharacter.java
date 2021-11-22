@@ -13,7 +13,7 @@ public class FirstUniqueCharacter {
 
         HashMap<Character, Boolean> map = new HashMap<>();
 
-        char chars[] = s.toCharArray();
+        char[] chars = s.toCharArray();
 
         for (int i = 0; i < chars.length; i++) {
             if (!map.containsKey(chars[i])) {

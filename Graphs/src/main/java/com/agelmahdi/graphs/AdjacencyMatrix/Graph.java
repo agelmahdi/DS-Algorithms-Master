@@ -8,7 +8,7 @@ import java.util.Stack;
 
 public class Graph {
     private ArrayList<GraphNode> graphNodes = new ArrayList<>();
-    private int[][] adjacentMatrix;
+    private final int[][] adjacentMatrix;
 
     public Graph(ArrayList<GraphNode> graphNodes) {
         int size = graphNodes.size();
@@ -145,7 +145,7 @@ public class Graph {
     // Breadth first search solution
     public void bfsForSSSPP(GraphNode graphNode) {
         Queue<GraphNode> queue = new LinkedList<>();
-        ((LinkedList<GraphNode>) queue).add(graphNode);
+        queue.add(graphNode);
         while (!queue.isEmpty()) {
 
             GraphNode current = queue.remove();
@@ -157,7 +157,7 @@ public class Graph {
 
             for (GraphNode neighbor : getNeighbors(current)) {
                 if (!neighbor.isSSSPVisited()) {
-                    ((LinkedList<GraphNode>) queue).add(neighbor);
+                    queue.add(neighbor);
                     neighbor.setSSSPVisited(true);
                     neighbor.setParent(current);
                 }

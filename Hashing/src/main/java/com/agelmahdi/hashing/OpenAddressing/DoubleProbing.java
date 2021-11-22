@@ -15,7 +15,7 @@ public class DoubleProbing {
 
     // HashFunction to be used on Keys
     private int hashFunction(String x, int M) {
-        char ch[];
+        char[] ch;
         ch = x.toCharArray();
         int i, sum;
         for (sum = 0, i = 0; i < x.length(); i++) {

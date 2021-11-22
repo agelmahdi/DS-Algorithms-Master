@@ -3,7 +3,7 @@ package com.agelmahdi.hashing;
 import java.util.LinkedList;
 
 public class DirectChaining {
-    private LinkedList<String>[] hashTable;
+    private final LinkedList<String>[] hashTable;
 
     public DirectChaining(int maxChain) {
         hashTable = new LinkedList[maxChain];

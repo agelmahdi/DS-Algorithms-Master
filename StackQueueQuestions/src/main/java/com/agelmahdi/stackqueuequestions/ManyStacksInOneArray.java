@@ -1,10 +1,10 @@
 package com.agelmahdi.stackqueuequestions;
 
 public class ManyStacksInOneArray {
-    private int numberOfStacks;
-    private int stackCapacity;
+    private final int numberOfStacks;
+    private final int stackCapacity;
     public int[] values;
-    private int[] sizes;
+    private final int[] sizes;
 
     public ManyStacksInOneArray(int numberOfStacks, int stackCapacity) {
         this.numberOfStacks = numberOfStacks;

@@ -50,7 +50,7 @@ public class MergeSort {
     *  Space complexity = O(n)
     *
     * */
-    private void sort(int arr[], int left, int right) {
+    private void sort(int[] arr, int left, int right) {
         if (right > left) {
             int middle = (left + right) / 2;
             sort(arr, left, middle);// ---> t(n/2)
@@ -59,7 +59,7 @@ public class MergeSort {
         }
     }
 
-    public void sort(int arr[]) {
+    public void sort(int[] arr) {
         sort(arr, 0, arr.length - 1);
     }
 

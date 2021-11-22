@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 class CoinsChange {
 
-    private int[] coins;
+    private final int[] coins;
 
     public CoinsChange(int[] coins) {
         this.coins = coins;

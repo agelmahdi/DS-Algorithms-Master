@@ -1,7 +1,7 @@
 package com.agelmahdi.stackarray;
 
 public class Stack {
-    int arr[];
+    int[] arr;
     int topIndex;
 
 
@@ -61,15 +61,13 @@ public class Stack {
     // Space Complexity --> O(1)
 
     public boolean isEmpty(){
-        if (topIndex == -1) return true;
-        else return false;
+        return topIndex == -1;
     }
 
     // Time complexity --> O(1)
     // Space Complexity --> O(1)
     public boolean isFull(){
-        if (topIndex == arr.length -1) return true;
-        else return false;
+        return topIndex == arr.length - 1;
     }
 
     // Time complexity --> O(1)

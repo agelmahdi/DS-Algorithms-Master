@@ -3,15 +3,15 @@ package com.agelmahdi.graphs.AdjacencyList;
 import java.util.ArrayList;
 
 public class GraphNode {
-    private String vertex;
-    private int index;
+    private final String vertex;
+    private final int index;
     private boolean isBFSVisited;
     private boolean isDFSVisited;
     private boolean isTopoVisited;
     private boolean isSSSPVisited;
     private GraphNode parent;
 
-    private ArrayList<GraphNode> neighbors = new ArrayList<>();
+    private final ArrayList<GraphNode> neighbors = new ArrayList<>();
 
     public GraphNode(String vertex, int index) {
         this.index = index;

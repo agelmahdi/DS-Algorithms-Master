@@ -133,7 +133,7 @@ public class Graph {
 
     public void bfsForSSSPP(GraphNode graphNode) {
         Queue<GraphNode> queue = new LinkedList<>();
-        ((LinkedList<GraphNode>) queue).add(graphNode);
+        queue.add(graphNode);
 
         while (!queue.isEmpty()) {
             GraphNode current = queue.remove();
@@ -143,7 +143,7 @@ public class Graph {
             System.out.println();
             for (GraphNode neighbor : current.getNeighbors()) {
                 if (!neighbor.isSSSPVisited()) {
-                    ((LinkedList<GraphNode>) queue).add(neighbor);
+                    queue.add(neighbor);
                     neighbor.setSSSPVisited(true);
                     neighbor.setParent(current);
 

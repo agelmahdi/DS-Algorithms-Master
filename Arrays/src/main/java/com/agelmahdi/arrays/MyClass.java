@@ -7,10 +7,10 @@ public class MyClass {
     public static void main(String[] args) {
 
         MyClass myClass = new MyClass();
-        int arr[] = {1,1,-1,1,1,-1};
-        int arr1[] = {1,1,1,-1,1,-1};
+        int[] arr = {1,1,-1,1,1,-1};
+        int[] arr1 = {1,1,1,-1,1,-1};
 
-        int matrix[][]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+        int[][] matrix ={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
         System.out.println(myClass.rotateMatrix90Degree(matrix));
 
         System.out.println(Arrays.deepToString(matrix));
@@ -19,7 +19,7 @@ public class MyClass {
 
     }
 
-    private String missingNumbers(int arr[]){
+    private String missingNumbers(int[] arr){
         Arrays.sort(arr);
         int firstNum =arr[0];
         String missing ="";
@@ -79,7 +79,7 @@ public class MyClass {
         return false;
     }
 
-    private boolean isPermutation(int arr1[],int arr2[]){
+    private boolean isPermutation(int[] arr1, int[] arr2){
         Arrays.sort(arr1);
         Arrays.sort(arr2);
 
@@ -94,14 +94,14 @@ public class MyClass {
 
     }
 
-    private boolean rotateMatrix90Degree(int matrix[][]){
+    private boolean rotateMatrix90Degree(int[][] matrix){
         int length = matrix.length;
 
         if (length ==0 || length != matrix[0].length) return false;
 
         //an anti clockwise example
 
-        int rotated[][] = new int[length][length];
+        int[][] rotated = new int[length][length];
         for (int r = 0; r < length; r++) {
             for (int c = 0; c < length; c++) {
                 rotated[c][length - 1 - r] = matrix[r][c];

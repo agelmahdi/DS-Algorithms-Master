@@ -177,7 +177,7 @@ public class MyClass {
         return n % 2 + 10 * decimalToBinary(n / 2);
     }
 
-    private int findMaxNumber(int arr[], int n) {
+    private int findMaxNumber(int[] arr, int n) {
         if (n == 1) {
             return arr[0];
         }
@@ -203,7 +203,7 @@ public class MyClass {
         return num + recursiveRange(num - 1);
     }
 
-    private int[] productOfArrayRe(int arr[]) {
+    private int[] productOfArrayRe(int[] arr) {
 
         int flag = -1;
         int i = 0;
@@ -240,7 +240,7 @@ public class MyClass {
     private int multi = 1;
     private int pos=0;
 
-    private int[] prodOfArray(int arr1[]) {
+    private int[] prodOfArray(int[] arr1) {
         if (prodArr.length == 0){
             prodArr = new int[arr1.length];
         }

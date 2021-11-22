@@ -1,9 +1,9 @@
 package com.agelmahdi.binaryheap;
 
 public class BinaryHeap {
-    private int[] heap;
+    private final int[] heap;
     private int lastVisitedIndex;
-    private String heapType;
+    private final String heapType;
     protected static final String MAX_HEAP = "MAX";
     protected static final String MIN_HEAP = "MIN";
 

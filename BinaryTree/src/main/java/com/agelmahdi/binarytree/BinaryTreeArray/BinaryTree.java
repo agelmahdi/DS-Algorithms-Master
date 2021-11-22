@@ -1,7 +1,7 @@
 package com.agelmahdi.binarytree.BinaryTreeArray;
 
 public class BinaryTree {
-    String arr[];
+    String[] arr;
     int lastVisitedIndex;
 
     // Time complexity O(1)

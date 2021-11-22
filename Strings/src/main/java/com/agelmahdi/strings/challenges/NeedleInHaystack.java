@@ -23,7 +23,7 @@ public class NeedleInHaystack {
 
         for (int i = 0; i < haystack.length(); i++) {
 
-            if (haystack.substring(i, i + needle.length()).equals(needle)) {
+            if (haystack.startsWith(needle, i)) {
                 return i;
             }
 

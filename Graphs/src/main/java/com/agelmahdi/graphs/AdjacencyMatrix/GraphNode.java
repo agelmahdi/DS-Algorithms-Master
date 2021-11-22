@@ -1,8 +1,8 @@
 package com.agelmahdi.graphs.AdjacencyMatrix;
 
 public class GraphNode {
-    private String vertex;
-    private int index;
+    private final String vertex;
+    private final int index;
     private boolean isBFSVisited;
     private boolean isDFSVisited;
     private boolean isTopoVisited;

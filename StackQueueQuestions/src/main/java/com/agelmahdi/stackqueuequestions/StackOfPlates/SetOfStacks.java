@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 
 public class SetOfStacks {
-    private ArrayList<Stack> stacks;
-    private int capacity;
+    private final ArrayList<Stack> stacks;
+    private final int capacity;
 
     public SetOfStacks(int capacity) {
         this.capacity = capacity;

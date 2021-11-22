@@ -1,7 +1,7 @@
 package com.agelmahdi.queuelinkedlist;
 
 public class Queue {
-    private LinkedList queue;
+    private final LinkedList queue;
     private int start;
     private int top;
 

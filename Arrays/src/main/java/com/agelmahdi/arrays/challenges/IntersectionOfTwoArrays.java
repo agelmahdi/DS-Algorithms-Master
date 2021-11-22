@@ -79,7 +79,7 @@ class IntersectionOfTwoArrays {
     // the best solution with response time 0ms
     public static int[] intersect4(int[] nums1, int[] nums2) {
 
-        int lookup[] = new int[1001];
+        int[] lookup = new int[1001];
         for (int i : nums1) {
             lookup[i]++;
         }

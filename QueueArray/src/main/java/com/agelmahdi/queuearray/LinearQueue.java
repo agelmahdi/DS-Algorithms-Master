@@ -1,7 +1,7 @@
 package com.agelmahdi.queuearray;
 
 public class LinearQueue {
-    int queue[] = null;
+    int[] queue = null;
     int startOfQueue;
     int topOfQueue;
 

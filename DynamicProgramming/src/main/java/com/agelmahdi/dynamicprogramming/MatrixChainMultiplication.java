@@ -11,7 +11,7 @@ class MatrixChainMultiplication {
      *  - i <= k < j
      * */
 
-    public int matrixChainOrderRecursion(int p[], int i, int j) {
+    public int matrixChainOrderRecursion(int[] p, int i, int j) {
         if (i == j)
             return 0;
 

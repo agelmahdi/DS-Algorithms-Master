@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class BucketSort {
-    private int[] arr;
+    private final int[] arr;
 
     /*
     * Number of buckets = round (sqrt(number of elements)).

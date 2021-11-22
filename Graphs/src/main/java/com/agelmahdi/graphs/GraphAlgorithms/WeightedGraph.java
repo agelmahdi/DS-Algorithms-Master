@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 
 public class WeightedGraph {
-    private ArrayList<WeightedNode> weightedNodes;
+    private final ArrayList<WeightedNode> weightedNodes;
 
     public WeightedGraph(ArrayList<WeightedNode> weightedNodes) {
         this.weightedNodes = weightedNodes;
@@ -88,7 +88,7 @@ public class WeightedGraph {
 
     public void floydWarshall() {
         int size = weightedNodes.size();
-        int matrix[][] = new int[size][size];
+        int[][] matrix = new int[size][size];
 
 
         for (int i = 0; i < size; i++) {

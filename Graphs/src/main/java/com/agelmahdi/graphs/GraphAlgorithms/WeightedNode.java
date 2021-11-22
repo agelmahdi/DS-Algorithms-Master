@@ -5,8 +5,8 @@ import java.util.HashMap;
 
 public class WeightedNode implements Comparable<WeightedNode>{
     private String vertex;
-    private ArrayList<WeightedNode> neighbors = new ArrayList<>();
-    private HashMap<WeightedNode, Integer> weightMap = new HashMap<>();
+    private final ArrayList<WeightedNode> neighbors = new ArrayList<>();
+    private final HashMap<WeightedNode, Integer> weightMap = new HashMap<>();
     private WeightedNode parent;
     private boolean isVisited;
     private int index;

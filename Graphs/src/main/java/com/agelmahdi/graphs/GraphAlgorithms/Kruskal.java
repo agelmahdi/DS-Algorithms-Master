@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 public class Kruskal {
     private ArrayList<WeightedNode> nodes = new ArrayList<>();
-    private ArrayList<UndirectedEdge> edges = new ArrayList<>();
+    private final ArrayList<UndirectedEdge> edges = new ArrayList<>();
 
     public Kruskal(ArrayList<WeightedNode> weightedNodes) {
         this.nodes = weightedNodes;

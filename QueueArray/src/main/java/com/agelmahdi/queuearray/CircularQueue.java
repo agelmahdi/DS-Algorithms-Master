@@ -1,7 +1,7 @@
 package com.agelmahdi.queuearray;
 
 public class CircularQueue {
-    int queue[] = null;
+    int[] queue = null;
     int start;
     int top;
     int size;

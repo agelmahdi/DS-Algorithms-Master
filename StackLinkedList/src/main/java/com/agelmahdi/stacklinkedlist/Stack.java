@@ -38,12 +38,7 @@ public class Stack {
 
 
     public boolean isEmpty() {
-        if (linkedList.head == null) {
-            return true;
-        } else {
-            return false;
-
-        }
+        return linkedList.head == null;
 
     }
 

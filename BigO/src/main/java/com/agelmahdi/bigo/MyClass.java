@@ -7,12 +7,12 @@ public class MyClass {
 
         MyClass myClass = new MyClass();
 
-        int arr[] = {1,2,3,4,5,6};
+        int[] arr = {1,2,3,4,5,6};
         myClass.reverseArr(arr);
 
     }
 
-    private void printPairsOfArray(int arr[]){
+    private void printPairsOfArray(int[] arr){
 
         for (int i=0; i<arr.length;i++){
             for (int j=0; j < arr.length; j++){
@@ -21,7 +21,7 @@ public class MyClass {
         }
     }
 
-    private void printPairs(int arr[]){
+    private void printPairs(int[] arr){
 
         for (int i=0; i<arr.length;i++){ //---------- O(n)
             for (int j=i+1; j < arr.length; j++){ //----------- O(n)
@@ -31,7 +31,7 @@ public class MyClass {
 
         // O(n^2)
     }
-    private void printUnOrderedPairsOfArray(int arr1[],int arr2[]){
+    private void printUnOrderedPairsOfArray(int[] arr1, int[] arr2){
 
         for (int i=0; i<arr1.length;i++){ //---------- O(a)
             for (int j=0; j < arr2.length; j++){ //----------- O(b)
@@ -41,7 +41,7 @@ public class MyClass {
         // O(ab) === O(n^2)
     }
 
-    private void printUnOrderedPairs(int arr1[],int arr2[]){
+    private void printUnOrderedPairs(int[] arr1, int[] arr2){
 
         for (int i=0; i<arr1.length;i++){ //---------- O(a)
             for (int j=i+1; j < arr2.length; j++){ //----------- O(b)
