@@ -1,7 +1,9 @@
 package com.agelmahdi.arrays.HardChallenges;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class FourSum {
 
@@ -26,7 +28,7 @@ public class FourSum {
         for (int i : nums3) {
             for (int j : nums4) {
                 int s = i + j;
-                map.put(s, map.getOrDefault(s,0) + 1);
+                map.compute(s, (k, v)-> v==null? 1 : v+1);
             }
         }
 
