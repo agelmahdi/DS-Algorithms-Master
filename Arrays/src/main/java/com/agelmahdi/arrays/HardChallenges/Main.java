@@ -23,6 +23,9 @@ public class Main {
         int [][]matrix6 = {{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}};
         int [][]matrix5 = {{2,3},{4,5},{6,7}};
         int [][]matrix7 = {{6,9,7}};
-        SpiralMatrix.spiralOrder(matrix7);
+       // SpiralMatrix.spiralOrder(matrix7);
+
+        int []nums1 = {1}, nums2 = {-1}, nums3 = {0}, nums4 = {1};
+        FourSum.fourSumCount(nums1,nums2,nums3,nums4);
     }
 }
