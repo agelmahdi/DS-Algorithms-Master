@@ -28,19 +28,23 @@ public class Main {
         int []nums1 = {1}, nums2 = {-1}, nums3 = {0}, nums4 = {1};
        // FourSum.fourSumCount(nums1,nums2,nums3,nums4);
 
-        int []height = {1,8,6,2,5,4,8,3,7};
-        int []height2 = {1,1};
-        int []height3 = {4,3,2,1,4};
-        int []height4 = {1,2,1};
-        int []height5= {2,3,10,5,7,8,9}; // 36
-        int []height6= {2,3,4,5,18,17,6}; // 17
-        int []height7= {1,1000,1000,6,2,5,4,8,3,7}; // 1000
-        ContainerWithMostWater.maxArea(height);
-        ContainerWithMostWater.maxArea(height2);
-        ContainerWithMostWater.maxArea(height3);
-        ContainerWithMostWater.maxArea(height4);
-        ContainerWithMostWater.maxArea(height5);
-        ContainerWithMostWater.maxArea(height6);
-        ContainerWithMostWater.maxArea(height7);
+//        int []height = {1,8,6,2,5,4,8,3,7};
+//        int []height2 = {1,1};
+//        int []height3 = {4,3,2,1,4};
+//        int []height4 = {1,2,1};
+//        int []height5= {2,3,10,5,7,8,9}; // 36
+//        int []height6= {2,3,4,5,18,17,6}; // 17
+//        int []height7= {1,1000,1000,6,2,5,4,8,3,7}; // 1000
+//        ContainerWithMostWater.maxArea(height);
+//        ContainerWithMostWater.maxArea(height2);
+//        ContainerWithMostWater.maxArea(height3);
+//        ContainerWithMostWater.maxArea(height4);
+//        ContainerWithMostWater.maxArea(height5);
+//        ContainerWithMostWater.maxArea(height6);
+//        ContainerWithMostWater.maxArea(height7);
+
+        int [][]board = {{0,1,0},{0,0,1},{1,1,1},{0,0,0}};
+
+        GameOfLife.gameOfLife(board);
     }
 }
