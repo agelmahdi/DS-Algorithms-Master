@@ -63,21 +63,39 @@ public class Main {
 //        FirstMissingPositive.firstMissingPositive(nums5);
 //        FirstMissingPositive.firstMissingPositive(nums6);
 
-        int[] nums = {100,4,200,1,3,2};
-        int[] nums1 = {3, 4, -1, 1};
-        int[] nums2 = {0,3,7,2,5,8,4,6,0,1};
-        int[] nums3 = {-2, 5, -1, 6};
-        int[] nums4 = {0};
-        int[] nums5 = {0,0};
-        int[] nums6 = {1,2,0,1};
+//        int[] nums = {100,4,200,1,3,2};
+//        int[] nums1 = {3, 4, -1, 1};
+//        int[] nums2 = {0,3,7,2,5,8,4,6,0,1};
+//        int[] nums3 = {-2, 5, -1, 6};
+//        int[] nums4 = {0};
+//        int[] nums5 = {0,0};
+//        int[] nums6 = {1,2,0,1};
+//
+//        LongestConsecutiveSequence.longestConsecutive(nums);
+//        LongestConsecutiveSequence.longestConsecutive(nums1);
+//        LongestConsecutiveSequence.longestConsecutive(nums2);
+//        LongestConsecutiveSequence.longestConsecutive(nums3);
+//        LongestConsecutiveSequence.longestConsecutive(nums4);
+//        LongestConsecutiveSequence.longestConsecutive(nums5);
+//        LongestConsecutiveSequence.longestConsecutive(nums6);
 
-        LongestConsecutiveSequence.longestConsecutive(nums);
-        LongestConsecutiveSequence.longestConsecutive(nums1);
-        LongestConsecutiveSequence.longestConsecutive(nums2);
-        LongestConsecutiveSequence.longestConsecutive(nums3);
-        LongestConsecutiveSequence.longestConsecutive(nums4);
-        LongestConsecutiveSequence.longestConsecutive(nums5);
-        LongestConsecutiveSequence.longestConsecutive(nums6);
+//        int[] nums = {1,3,4,2,2};
+//        int[] nums1 = {3,1,3,4,2};
+//        int[] nums2 = {1,1};
+//        int[] nums3 = {1,1,2};
+//
+//        System.out.println(FindTheDuplicateNumber.findDuplicate(nums));
+//        System.out.println(FindTheDuplicateNumber.findDuplicate(nums1));
+//        System.out.println(FindTheDuplicateNumber.findDuplicate(nums2));
+//        System.out.println(FindTheDuplicateNumber.findDuplicate(nums3));
+
+
+       // BasicCalculatorII.calculate("3+2*2");
+
+        int []nums = {1,3,-1,-3,5,3,6,7}; int k = 3;
+
+        SlidingWindowMaximum.maxSlidingWindow(nums,k);
+
 
     }
 }
