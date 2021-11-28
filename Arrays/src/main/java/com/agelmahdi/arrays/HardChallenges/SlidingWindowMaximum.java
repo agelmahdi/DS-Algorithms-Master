@@ -1,22 +1,36 @@
 package com.agelmahdi.arrays.HardChallenges;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
+import com.sun.tools.javac.util.ArrayUtils;
+
+import java.util.ArrayList;
+
 
 
 public class SlidingWindowMaximum {
 
+    /*
+    * You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right.
+    * You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+    * Return the max sliding window.
+    * */
+
     public static int[] maxSlidingWindow(int[] nums, int k) {
 
-        int[] res = new int[nums.length];
+        ArrayList<Integer> list = new ArrayList<>();
 
-        Deque<Integer> queue = new ArrayDeque<Integer>();
+        for (int i =0; i < nums.length; i++){
+            int max = Integer.MIN_VALUE;
 
-        int max = Integer.MIN_VALUE;
+            if (k <= nums.length)
+            for (int j = i; j < k ; j++){
+                max = Math.max(max, nums[j]);
+            }
+            k++;
+            if (max != Integer.MIN_VALUE){
+                list.add(max);
+            }
+        }
 
-        System.out.println(Arrays.toString(res));
-
-        return res;
+        return list.stream().mapToInt(Integer::intValue).toArray();
     }
 }
