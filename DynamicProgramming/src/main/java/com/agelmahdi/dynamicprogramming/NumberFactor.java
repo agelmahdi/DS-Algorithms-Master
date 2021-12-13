@@ -28,7 +28,7 @@ class NumberFactor {
     }
 
     public int numberFactorTabular(int number){
-        int []tabular = new int[number +1];
+        int []tabular = new int[number + 1];
         tabular[0] = tabular[1] = tabular[2] =1;
         tabular[3] = 2;
         for (int i =4; i<= number ; i++){
